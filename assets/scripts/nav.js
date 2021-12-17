@@ -12,6 +12,6 @@
 //})
 
 
-// placeholder search input
+// definition de placeholder search input, par exemple pour ne pas payer le premium du plugin "ivory search"
 
 // document.getElementById('is-search-input-53').setAttribute('placeholder', 'Rechercher');
