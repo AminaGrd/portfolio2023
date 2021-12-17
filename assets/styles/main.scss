@@ -1,0 +1,38 @@
+:root{
+    --mainColor: black;
+}
+html{
+    font-size:15px;
+    font-family: sans-serif;
+}
+
+
+// relatif a la pagination:
+
+/* .pagination{
+    text-align: center;
+    .nav-links{
+        margin: auto;
+        a, span{
+            padding: 0.2rem;
+        }
+        a{
+            border: 1px solid black;
+        }
+    }
+} */
+
+// incrustation youtube dans les the_content: responsive et 100% width
+
+/* iframe[src*="youtube."]{
+    width:100% !important;
+    height: auto !important;
+    aspect-ratio: 16/9 !important;
+} */
+
+// images dans the_content => reduction d'écran sans déformation et hauteur du cadre collant
+
+/* .content img[class*="wp"]{
+    object-fit: contain !important;
+    height: auto;
+} */

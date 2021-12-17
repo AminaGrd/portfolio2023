@@ -1,0 +1,30 @@
+:root {
+  --mainColor: black;
+}
+
+html {
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+/* .pagination{
+    text-align: center;
+    .nav-links{
+        margin: auto;
+        a, span{
+            padding: 0.2rem;
+        }
+        a{
+            border: 1px solid black;
+        }
+    }
+} */
+/* iframe[src*="youtube."]{
+    width:100% !important;
+    height: auto !important;
+    aspect-ratio: 16/9 !important;
+} */
+/* .content img[class*="wp"]{
+    object-fit: contain !important;
+    height: auto;
+} *//*# sourceMappingURL=main.css.map */
