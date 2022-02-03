@@ -20,4 +20,6 @@ if (!isset($this_name)||empty($this_name)) {
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
+    <?php get_template_part( 'template-parts/nav' ); ?>
+    
     <div class="content">
