@@ -22,3 +22,15 @@ function register_assets(){
 
 }
 add_action('wp_enqueue_scripts', 'register_assets');
+
+
+// suppression de la balise title dans la function wp_head
+// remove_action( 'wp_head', '_wp_render_title_tag', 1 );
+
+// suppression des attributs type sur les balises script et style (w3c)
+add_action(
+  'after_setup_theme',
+  function() {
+      add_theme_support( 'html5', [ 'script', 'style' ] );
+  }
+);
