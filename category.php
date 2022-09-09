@@ -9,6 +9,7 @@
     $this_slug = $category->slug;  // renvoi le slug DE LA PAGE
     $this_id = $category->term_id; // renvoi l'ID DE LA PAGE
     $this_name = $category->name;  // renvoi le name DE LA PAGE
+    $this_description = $category->description;  // renvoi la description DE LA cat
     
     $args = array(
         'post_type' => 'post',
