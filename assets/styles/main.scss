@@ -1,11 +1,18 @@
-:root{
+// exemple define font-family localy
+
+/* @font-face {
+    font-family: "OpenSans-Light";
+    src: url("../font/OpenSans-Light.ttf");
+} */
+
+:root {
     --mainColor: black;
 }
-html{
-    font-size:15px;
+
+html {
+    font-size: 15px;
     font-family: sans-serif;
 }
-
 
 // relatif a la pagination:
 
