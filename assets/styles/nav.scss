@@ -10,6 +10,7 @@ nav{
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             >li{
                 text-align: center;
                 &:first-child{
@@ -20,7 +21,7 @@ nav{
                 }
                 a{
                     display: block;
-                    width: 100%;
+                    width: 180px;
                     padding: 1rem 0;
                     text-transform: uppercase;
                     color: white;
@@ -32,6 +33,18 @@ nav{
                     display: none;
                 }
                 padding: 1rem 0;
+                border-top: white solid 2px;
+                border-bottom: white solid 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90px;
+            }
+            .current_page_item{
+                a{
+                    text-decoration: underline #9FC131;
+                    text-underline-position: under;
+                }
             }
         }
     }
