@@ -1,8 +1,8 @@
 nav{
-    width: 180px;
+    width: var(--mainSizeNavbar);
     height: 100vh;
     background-color: var(--mainDarkBlue);
-    margin-left: 30px;
+    margin-left: var(--mainMarginDesktop);
     position: fixed;
     .menu-navbar-container{
         #menu-navbar{
@@ -21,7 +21,7 @@ nav{
                 }
                 a{
                     display: block;
-                    width: 180px;
+                    width: var(--mainSizeNavbar);
                     padding: 1rem 0;
                     text-transform: uppercase;
                     color: white;
@@ -38,14 +38,183 @@ nav{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 90px;
+                width: calc(var(--mainSizeNavbar)/2);
             }
             .current_page_item{
                 a{
-                    text-decoration: underline #9FC131;
+                    text-decoration: underline var(--mainGreen);
                     text-underline-position: under;
                 }
             }
         }
     }
+    @media (max-width: 1000px){
+        position: absolute;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        margin: 0;
+        .menu-navbar-container{
+            display: none;
+            position: absolute;
+            background-color: var(--mainDarkBlueAlpha);
+            z-index: 0;
+            padding: var(--mainMarginDesktop) 0;
+            #menu-navbar{
+                height: auto;
+            }
+            &.menu-navbar-container--show{
+                display: block;
+                order: 3;
+                min-width: 100vw;
+                animation-duration: 0.5s;
+                animation-name: showMenu;
+                animation-fill-mode: forwards;
+            }
+            &.menu-navbar-container--unshow{
+                display: block;
+                order: 3;
+                min-width: 100vw;
+                animation-duration: 0.5s;
+                animation-name: unshowMenu;
+                animation-fill-mode: forwards;
+            }
+        }
+        .nav__burger{
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 30px;
+            margin-top: 20px;
+            margin-left:20px;
+            z-index: 2;
+                >div{
+                    height: 3px;
+                    width: 30px;
+                    background-color: var(--mainDarkBlue);
+                    border-radius: 20px;
+                    &:first-child{
+                        width: 50px;
+                    }
+                    &:last-child{
+                        width: 50px;
+                    }
+                }
+                &.nav__burger--cross{
+                    div:nth-child(1){
+                        animation-duration: 0.5s;
+                        animation-name: crossMenu1;
+                        animation-fill-mode: forwards;
+                        
+                    }
+                    div:nth-child(2){
+                        animation-duration: 0.05s;
+                        animation-name: crossMenu2;
+                        animation-fill-mode: forwards;
+                        
+                    }
+                    div:nth-child(3){
+                        animation-duration: 0.5s;
+                        animation-name: crossMenu3;
+                        animation-fill-mode: forwards;
+                        
+                    }
+                }
+                &.nav__burger--burger{
+                    div:nth-child(1){
+                        animation-duration: 0.5s;
+                        animation-name: burgerMenu1;
+                        animation-fill-mode: both;
+                        
+                    }
+                    div:nth-child(2){
+                        animation-duration: 0.5s;
+                        animation-name: burgerMenu2;
+                        animation-fill-mode: both;
+                        
+                    }
+                    div:nth-child(3){
+                        animation-duration: 0.5s;
+                        animation-name: burgerMenu3;
+                        animation-fill-mode: both;
+                        
+                    }
+                }
+        }
+    }
 }
+@keyframes showMenu {
+    from {
+        top: -400px;
+    }
+    to {
+        top: 0;
+    }
+  }
+  @keyframes unshowMenu {
+    from {
+        top: 0;
+    }
+    to {
+        top: -400px;
+    }
+  }
+
+  @keyframes crossMenu1 {
+    from {
+        transform: rotate(0deg) translate(0px, 0px);
+        background-color: var(--mainDarkBlue);
+    }
+    to {
+        transform: rotate(45deg) translate(9px, 9px);
+        background-color: white;
+    }
+  }
+  @keyframes crossMenu2 {
+    from {
+        opacity: 100;
+    }
+    to {
+        opacity: 0;
+    }
+  }
+  @keyframes crossMenu3 {
+    from {
+        transform: rotate(0deg) translate(0px, 0px);
+        background-color: var(--mainDarkBlue);
+    }
+    to {
+        transform: rotate(-45deg) translate(9px, -9px);
+        background-color: white;
+    }
+  }
+
+  @keyframes burgerMenu1 {
+    from {
+        transform: rotate(45deg) translate(9px, 9px);
+        background-color: white;
+    }
+    to {
+        transform: rotate(0deg) translate(0px, 0px);
+        background-color: var(--mainDarkBlue);
+    }
+  }
+  @keyframes burgerMenu2 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+  }
+  @keyframes burgerMenu3 {
+    from {
+        transform: rotate(-45deg) translate(9px, -9px);
+        background-color: white;
+    }
+    to {
+        transform: rotate(0deg) translate(0px, 0px);
+        background-color: var(--mainDarkBlue);
+    }
+  }

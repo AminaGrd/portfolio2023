@@ -1,8 +1,8 @@
 nav {
-  width: 180px;
+  width: var(--mainSizeNavbar);
   height: 100vh;
   background-color: var(--mainDarkBlue);
-  margin-left: 30px;
+  margin-left: var(--mainMarginDesktop);
   position: fixed;
 }
 nav .menu-navbar-container #menu-navbar {
@@ -23,7 +23,7 @@ nav .menu-navbar-container #menu-navbar > li:last-child {
 }
 nav .menu-navbar-container #menu-navbar > li a {
   display: block;
-  width: 180px;
+  width: var(--mainSizeNavbar);
   padding: 1rem 0;
   text-transform: uppercase;
   color: white;
@@ -36,13 +36,270 @@ nav .menu-navbar-container #menu-navbar .menu-item-has-children {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90px;
+  width: calc(var(--mainSizeNavbar) / 2);
 }
 nav .menu-navbar-container #menu-navbar .menu-item-has-children > a {
   display: none;
 }
 nav .menu-navbar-container #menu-navbar .current_page_item a {
-  -webkit-text-decoration: underline #9FC131;
-          text-decoration: underline #9FC131;
+  -webkit-text-decoration: underline var(--mainGreen);
+          text-decoration: underline var(--mainGreen);
   text-underline-position: under;
+}
+@media (max-width: 1000px) {
+  nav {
+    position: absolute;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    margin: 0;
+  }
+  nav .menu-navbar-container {
+    display: none;
+    position: absolute;
+    background-color: var(--mainDarkBlueAlpha);
+    z-index: 0;
+    padding: var(--mainMarginDesktop) 0;
+  }
+  nav .menu-navbar-container #menu-navbar {
+    height: auto;
+  }
+  nav .menu-navbar-container.menu-navbar-container--show {
+    display: block;
+    order: 3;
+    min-width: 100vw;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: showMenu;
+            animation-name: showMenu;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  nav .menu-navbar-container.menu-navbar-container--unshow {
+    display: block;
+    order: 3;
+    min-width: 100vw;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: unshowMenu;
+            animation-name: unshowMenu;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  nav .nav__burger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    z-index: 2;
+  }
+  nav .nav__burger > div {
+    height: 3px;
+    width: 30px;
+    background-color: var(--mainDarkBlue);
+    border-radius: 20px;
+  }
+  nav .nav__burger > div:first-child {
+    width: 50px;
+  }
+  nav .nav__burger > div:last-child {
+    width: 50px;
+  }
+  nav .nav__burger.nav__burger--cross div:nth-child(1) {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: crossMenu1;
+            animation-name: crossMenu1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  nav .nav__burger.nav__burger--cross div:nth-child(2) {
+    -webkit-animation-duration: 0.05s;
+            animation-duration: 0.05s;
+    -webkit-animation-name: crossMenu2;
+            animation-name: crossMenu2;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  nav .nav__burger.nav__burger--cross div:nth-child(3) {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: crossMenu3;
+            animation-name: crossMenu3;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  nav .nav__burger.nav__burger--burger div:nth-child(1) {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: burgerMenu1;
+            animation-name: burgerMenu1;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+  nav .nav__burger.nav__burger--burger div:nth-child(2) {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: burgerMenu2;
+            animation-name: burgerMenu2;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+  nav .nav__burger.nav__burger--burger div:nth-child(3) {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-name: burgerMenu3;
+            animation-name: burgerMenu3;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+  }
+}
+
+@-webkit-keyframes showMenu {
+  from {
+    top: -400px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes showMenu {
+  from {
+    top: -400px;
+  }
+  to {
+    top: 0;
+  }
+}
+@-webkit-keyframes unshowMenu {
+  from {
+    top: 0;
+  }
+  to {
+    top: -400px;
+  }
+}
+@keyframes unshowMenu {
+  from {
+    top: 0;
+  }
+  to {
+    top: -400px;
+  }
+}
+@-webkit-keyframes crossMenu1 {
+  from {
+    transform: rotate(0deg) translate(0px, 0px);
+    background-color: var(--mainDarkBlue);
+  }
+  to {
+    transform: rotate(45deg) translate(9px, 9px);
+    background-color: white;
+  }
+}
+@keyframes crossMenu1 {
+  from {
+    transform: rotate(0deg) translate(0px, 0px);
+    background-color: var(--mainDarkBlue);
+  }
+  to {
+    transform: rotate(45deg) translate(9px, 9px);
+    background-color: white;
+  }
+}
+@-webkit-keyframes crossMenu2 {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes crossMenu2 {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes crossMenu3 {
+  from {
+    transform: rotate(0deg) translate(0px, 0px);
+    background-color: var(--mainDarkBlue);
+  }
+  to {
+    transform: rotate(-45deg) translate(9px, -9px);
+    background-color: white;
+  }
+}
+@keyframes crossMenu3 {
+  from {
+    transform: rotate(0deg) translate(0px, 0px);
+    background-color: var(--mainDarkBlue);
+  }
+  to {
+    transform: rotate(-45deg) translate(9px, -9px);
+    background-color: white;
+  }
+}
+@-webkit-keyframes burgerMenu1 {
+  from {
+    transform: rotate(45deg) translate(9px, 9px);
+    background-color: white;
+  }
+  to {
+    transform: rotate(0deg) translate(0px, 0px);
+    background-color: var(--mainDarkBlue);
+  }
+}
+@keyframes burgerMenu1 {
+  from {
+    transform: rotate(45deg) translate(9px, 9px);
+    background-color: white;
+  }
+  to {
+    transform: rotate(0deg) translate(0px, 0px);
+    background-color: var(--mainDarkBlue);
+  }
+}
+@-webkit-keyframes burgerMenu2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+@keyframes burgerMenu2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
+@-webkit-keyframes burgerMenu3 {
+  from {
+    transform: rotate(-45deg) translate(9px, -9px);
+    background-color: white;
+  }
+  to {
+    transform: rotate(0deg) translate(0px, 0px);
+    background-color: var(--mainDarkBlue);
+  }
+}
+@keyframes burgerMenu3 {
+  from {
+    transform: rotate(-45deg) translate(9px, -9px);
+    background-color: white;
+  }
+  to {
+    transform: rotate(0deg) translate(0px, 0px);
+    background-color: var(--mainDarkBlue);
+  }
 }/*# sourceMappingURL=nav.css.map */
