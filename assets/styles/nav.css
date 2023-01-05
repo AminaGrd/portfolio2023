@@ -1,0 +1,36 @@
+nav {
+  width: 180px;
+  height: 100vh;
+  background-color: var(--mainDarkBlue);
+  margin-left: 30px;
+  position: fixed;
+}
+nav .menu-navbar-container #menu-navbar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+nav .menu-navbar-container #menu-navbar > li {
+  text-align: center;
+}
+nav .menu-navbar-container #menu-navbar > li:first-child {
+  padding-bottom: 1rem;
+}
+nav .menu-navbar-container #menu-navbar > li:last-child {
+  padding-top: 1rem;
+}
+nav .menu-navbar-container #menu-navbar > li a {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.2rem;
+}
+nav .menu-navbar-container #menu-navbar .menu-item-has-children {
+  padding: 1rem 0;
+}
+nav .menu-navbar-container #menu-navbar .menu-item-has-children > a {
+  display: none;
+}/*# sourceMappingURL=nav.css.map */

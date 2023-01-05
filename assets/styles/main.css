@@ -1,14 +1,15 @@
-/* @font-face {
-    font-family: "OpenSans-Light";
-    src: url("../font/OpenSans-Light.ttf");
-} */
+@font-face {
+  font-family: "OpenSans-Light";
+  src: url("../font/OpenSans-Light.ttf");
+}
 :root {
   --mainColor: black;
+  --mainDarkBlue: #042940;
 }
 
 html {
   font-size: 15px;
-  font-family: sans-serif;
+  font-family: "OpenSans-Light";
 }
 
 /* .pagination{

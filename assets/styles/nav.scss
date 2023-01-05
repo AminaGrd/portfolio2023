@@ -1,0 +1,38 @@
+nav{
+    width: 180px;
+    height: 100vh;
+    background-color: var(--mainDarkBlue);
+    margin-left: 30px;
+    position: fixed;
+    .menu-navbar-container{
+        #menu-navbar{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            >li{
+                text-align: center;
+                &:first-child{
+                    padding-bottom: 1rem;    
+                }
+                &:last-child{
+                    padding-top: 1rem;    
+                }
+                a{
+                    display: block;
+                    width: 100%;
+                    padding: 1rem 0;
+                    text-transform: uppercase;
+                    color: white;
+                    font-size: 1.2rem;
+                }
+            }
+            .menu-item-has-children{
+                >a{
+                    display: none;
+                }
+                padding: 1rem 0;
+            }
+        }
+    }
+}
