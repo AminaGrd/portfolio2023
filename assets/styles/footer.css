@@ -1,1 +1,48 @@
-/*# sourceMappingURL=footer.css.map */
+footer {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+footer .footer__contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 calc(var(--mainMarginDesktop) / 2);
+}
+footer .footer__contact img {
+  width: calc(var(--mainMarginDesktop) * 2);
+}
+footer .footer__contact img:first-child {
+  margin-bottom: calc(var(--mainMarginDesktop) / 4);
+}
+footer .footer__contact img:last-child {
+  margin-top: calc(var(--mainMarginDesktop) / 4);
+}
+@media (max-width: 1200px) {
+  footer {
+    height: auto;
+    position: relative;
+    margin-left: calc(var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar));
+    margin-right: var(--mainMarginDesktop);
+  }
+  footer .footer__contact {
+    height: auto;
+    flex-direction: row;
+    padding: calc(var(--mainMarginDesktop) / 2) 0;
+  }
+  footer .footer__contact img:first-child {
+    margin-bottom: 0;
+    margin-right: calc(var(--mainMarginDesktop) / 4);
+  }
+  footer .footer__contact img:last-child {
+    margin-top: 0;
+    margin-left: calc(var(--mainMarginDesktop) / 4);
+  }
+}
+@media (max-width: 1000px) {
+  footer {
+    margin-left: calc(var(--mainMarginDesktop));
+  }
+}/*# sourceMappingURL=footer.css.map */
