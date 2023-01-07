@@ -13,12 +13,17 @@ footer .footer__contact {
 }
 footer .footer__contact img {
   width: calc(var(--mainMarginDesktop) * 2);
+  transition: transform 0.2s;
+  position: relative;
 }
 footer .footer__contact img:first-child {
   margin-bottom: calc(var(--mainMarginDesktop) / 4);
 }
 footer .footer__contact img:last-child {
   margin-top: calc(var(--mainMarginDesktop) / 4);
+}
+footer .footer__contact img:hover {
+  transform: translate(-10px, 0);
 }
 @media (max-width: 1200px) {
   footer {
@@ -39,6 +44,9 @@ footer .footer__contact img:last-child {
   footer .footer__contact img:last-child {
     margin-top: 0;
     margin-left: calc(var(--mainMarginDesktop) / 4);
+  }
+  footer .footer__contact img:hover {
+    transform: translate(0, -10px);
   }
 }
 @media (max-width: 1000px) {

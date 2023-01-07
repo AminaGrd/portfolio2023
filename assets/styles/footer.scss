@@ -11,11 +11,16 @@ footer{
         margin: 0 calc(var(--mainMarginDesktop)/2);
         img{
             width: calc(var(--mainMarginDesktop)*2);
+            transition: transform .2s;
+            position: relative;
             &:first-child{
                 margin-bottom: calc(var(--mainMarginDesktop)/4);
             }
             &:last-child{
                 margin-top: calc(var(--mainMarginDesktop)/4);
+            }
+            &:hover{
+                transform: translate(-10px, 0);
             }
         }
     }
@@ -36,6 +41,9 @@ footer{
                 &:last-child{
                     margin-top: 0;
                     margin-left: calc(var(--mainMarginDesktop)/4);
+                }
+                &:hover{
+                    transform: translate(0, -10px);
                 }
             }
         }
