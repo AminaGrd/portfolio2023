@@ -9,7 +9,7 @@ footer .footer__contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 calc(var(--mainMarginDesktop) / 2);
+  margin: 0 var(--mainMarginDesktop);
 }
 footer .footer__contact img {
   width: calc(var(--mainMarginDesktop) * 2);

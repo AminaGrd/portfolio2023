@@ -1,1 +1,35 @@
-/*# sourceMappingURL=content.css.map */
+.content {
+  padding: var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 4) var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar));
+}
+.content h1 {
+  text-transform: uppercase;
+  color: var(--mainDarkBlue);
+  font-size: 4rem;
+  margin-bottom: var(--mainMarginDesktop);
+}
+.content .content__presentation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .content__presentation .content__img--size {
+  min-width: 250px;
+  margin: 0;
+}
+.content .content__presentation .content__img--size img {
+  border-radius: 20px;
+}
+.content .content__presentation .content__text--darkgreen {
+  margin-left: var(--mainMarginDesktop);
+  background-color: var(--mainDarkGreen);
+  color: white;
+  padding: var(--mainMarginDesktop) calc(var(--mainMarginDesktop) / 2);
+  height: 250px;
+  border-radius: 20px;
+}
+@media (max-width: 1200px) {
+  .content {
+    padding: var(--mainMarginDesktop) var(--mainMarginDesktop) var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar));
+  }
+}/*# sourceMappingURL=content.css.map */
