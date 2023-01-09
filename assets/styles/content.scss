@@ -45,6 +45,30 @@
             font-size: 1.5rem;
             font-weight: bold;
             text-transform: uppercase;
+            h2{
+                padding: 0 var(--mainMarginDesktop);
+            }
+        }
+        .disactived{
+            color: white;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-align: center;
+            h2{
+                min-height: 250px;
+                min-width: 250px;
+                max-height: 250px;
+                height: 250px;
+                border-radius: 20px;
+                padding: var(--mainMarginDesktop);
+                display: table-cell;
+                vertical-align: middle;
+                &:hover{
+                    transition: background-color .5s;
+                    background-color: var(--mainDarkBlueAlpha2);
+                    backdrop-filter: blur(2px);
+                }
+            }
         }
         .content__div--webdesign{
             display: flex;
@@ -54,16 +78,17 @@
             .content__div--webdesign--text{
                 min-height: 250px;
                 min-width: 250px;
+                max-height: 250px;
                 width: 100%;
                 margin-right: var(--mainMarginDesktop);
                 background: var(--mainGreen);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                padding: var(--mainMarginDesktop);
                 border-radius: 20px;
                 .content__div--webdesign--p{
                     display: block;
+                    padding: 0 var(--mainMarginDesktop);
                     >ul{
                         >li{
                             color: white;
@@ -84,6 +109,7 @@
                 align-items: center;
                 min-height: 250px;
                 min-width: 250px;
+                max-height: 250px;
                 border: var(--mainDarkBlue) 3px solid;
                 border-radius: 20px;
                 >div{
@@ -107,10 +133,27 @@
             .content__div--communication--text{
                 min-width: 250px;
                 min-height: 250px;
+                border-radius: 20px;
                 margin-left: var(--mainMarginDesktop);
-                border: yellow 1px solid;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: url(http://localhost/portfolio/wp-content/uploads/2023/01/bckgrd-bug1-scaled.jpg);
+                background-size: contain;
                 .content__div--communication--p{
                     display: none;
+                    padding: 0 var(--mainMarginDesktop);
+                    >ul{
+                        >li{
+                            color: white;
+                            margin-top: calc(var(--mainMarginDesktop)/2);
+                            ul{
+                                li{
+                                    color: var(--mainDarkBlue);
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
