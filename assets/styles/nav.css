@@ -5,6 +5,9 @@ nav {
   margin-left: var(--mainMarginDesktop);
   position: fixed;
 }
+nav .menu-navbar-container {
+  font-family: "OpenSans-Light";
+}
 nav .menu-navbar-container #menu-navbar {
   height: 100vh;
   display: flex;
