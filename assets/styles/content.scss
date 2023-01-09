@@ -13,19 +13,26 @@
         align-items: center;
         .content__img--size{
             min-width: 250px;
+            max-width: 250px;
             margin: 0;
             img{
                 border-radius: 20px;
+                max-width: 250px;
             }
         }
-        .content__text--darkgreen{
-            margin-left: var(--mainMarginDesktop);
+        .content__text{
+            min-height: 250px;
             background-color: var(--mainDarkGreen);
-            color: white;
-            padding: var(--mainMarginDesktop) calc(var(--mainMarginDesktop)/2);
-            height: 250px;
+            margin-left: var(--mainMarginDesktop);
             border-radius: 20px;
+            display: flex;
+            align-items: center;
+            .content__text--darkgreen{
+                color: white;
+                padding: var(--mainMarginDesktop);
+            }
         }
+        
     }
     
     // .form.wpcf7-form {
