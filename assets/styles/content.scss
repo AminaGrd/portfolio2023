@@ -11,6 +11,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: var(--mainMarginDesktop);
         .content__img--size{
             min-width: 250px;
             max-width: 250px;
@@ -33,6 +34,57 @@
             }
         }
         
+    }
+    .content__div--competence{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .content__div--webdesign{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border: black 1px solid;
+            width: 100%;
+            .content__div--webdesign--text{
+                min-height: 250px;
+                min-width: 250px;
+                width: 100%;
+                margin-right: var(--mainMarginDesktop);
+                border: red 1px solid;
+                .content__div--webdesign--p{
+
+                }
+            }
+            .content__div--webdesign--logo{
+                display: flex;
+                flex-direction: column;
+                min-height: 250px;
+                min-width: 250px;
+                border: green 1px solid;
+                >div{
+                    display: flex;
+                    flex-direction: row;
+                    img{
+                        max-width: 40px;
+	                    height: auto;
+                        max-height: 40px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+        .content__div--communication{
+            .content__div--communication--text{
+                min-width: 250px;
+                min-height: 250px;
+                margin-left: var(--mainMarginDesktop);
+                border: yellow 1px solid;
+                .content__div--communication--p{
+                    display: none;
+                }
+            }
+        }
     }
     
     // .form.wpcf7-form {

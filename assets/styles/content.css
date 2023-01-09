@@ -12,6 +12,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: var(--mainMarginDesktop);
 }
 .content .content__presentation .content__img--size {
   min-width: 250px;
@@ -33,6 +34,52 @@
 .content .content__presentation .content__text .content__text--darkgreen {
   color: white;
   padding: var(--mainMarginDesktop);
+}
+.content .content__div--competence {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .content__div--competence .content__div--webdesign {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: black 1px solid;
+  width: 100%;
+}
+.content .content__div--competence .content__div--webdesign .content__div--webdesign--text {
+  min-height: 250px;
+  min-width: 250px;
+  width: 100%;
+  margin-right: var(--mainMarginDesktop);
+  border: red 1px solid;
+}
+.content .content__div--competence .content__div--webdesign .content__div--webdesign--logo {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  min-width: 250px;
+  border: green 1px solid;
+}
+.content .content__div--competence .content__div--webdesign .content__div--webdesign--logo > div {
+  display: flex;
+  flex-direction: row;
+}
+.content .content__div--competence .content__div--webdesign .content__div--webdesign--logo > div img {
+  max-width: 40px;
+  height: auto;
+  max-height: 40px;
+  width: auto;
+}
+.content .content__div--competence .content__div--communication .content__div--communication--text {
+  min-width: 250px;
+  min-height: 250px;
+  margin-left: var(--mainMarginDesktop);
+  border: yellow 1px solid;
+}
+.content .content__div--competence .content__div--communication .content__div--communication--text .content__div--communication--p {
+  display: none;
 }
 @media (max-width: 1200px) {
   .content {
