@@ -96,7 +96,7 @@ nav .menu-navbar-container #menu-navbar .current_page_item a {
     justify-content: space-between;
     height: 30px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: var(--mainMarginDesktop);
     z-index: 2;
   }
   nav .nav__burger > div {
@@ -163,7 +163,7 @@ nav .menu-navbar-container #menu-navbar .current_page_item a {
 
 @-webkit-keyframes showMenu {
   from {
-    top: -400px;
+    top: -500px;
   }
   to {
     top: 0;
@@ -172,7 +172,7 @@ nav .menu-navbar-container #menu-navbar .current_page_item a {
 
 @keyframes showMenu {
   from {
-    top: -400px;
+    top: -500px;
   }
   to {
     top: 0;
@@ -183,7 +183,7 @@ nav .menu-navbar-container #menu-navbar .current_page_item a {
     top: 0;
   }
   to {
-    top: -400px;
+    top: -500px;
   }
 }
 @keyframes unshowMenu {
@@ -191,7 +191,7 @@ nav .menu-navbar-container #menu-navbar .current_page_item a {
     top: 0;
   }
   to {
-    top: -400px;
+    top: -500px;
   }
 }
 @-webkit-keyframes crossMenu1 {

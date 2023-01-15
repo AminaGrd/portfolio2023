@@ -25,7 +25,7 @@ footer .footer__contact img:last-child {
 footer .footer__contact img:hover {
   transform: translate(-10px, 0);
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   footer {
     height: auto;
     position: relative;

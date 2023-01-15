@@ -65,6 +65,7 @@
   padding: var(--mainMarginDesktop);
   display: table-cell;
   vertical-align: middle;
+  cursor: pointer;
 }
 .content .content__div--competence .disactived h2:hover {
   transition: background-color 0.5s;
@@ -134,8 +135,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url(http://localhost/portfolio/wp-content/uploads/2023/01/bckgrd-bug1-scaled.jpg);
-  background-size: contain;
+  background: url(http://localhost/portfolio/wp-content/uploads/2023/01/bckgrd-bug1-1-scaled-e1673789660900.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .content .content__div--competence .content__div--communication .content__div--communication--text .content__div--communication--p {
   display: none;
@@ -148,8 +150,44 @@
 .content .content__div--competence .content__div--communication .content__div--communication--text .content__div--communication--p > ul > li ul li {
   color: var(--mainDarkBlue);
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .content {
     padding: var(--mainMarginDesktop) var(--mainMarginDesktop) var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar));
+  }
+}
+@media (max-width: 1250px) {
+  .content .content__div--competence {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content .content__div--competence .disactived h2 {
+    height: calc(var(--mainMarginDesktop) * 2);
+    width: calc(100vw - (var(--mainMarginDesktop) + var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar)));
+    min-height: 0;
+    padding: 0;
+    height: calc(var(--mainMarginDesktop) * 4);
+  }
+  .content .content__div--competence .content__div--webdesign {
+    margin-bottom: var(--mainMarginDesktop);
+  }
+  .content .content__div--competence .content__div--communication .content__div--communication--text {
+    margin: 0;
+    width: calc(100vw - (var(--mainMarginDesktop) + var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar)));
+    height: calc(var(--mainMarginDesktop) * 4);
+    min-height: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .content {
+    padding: calc(var(--mainMarginDesktop) * 2) var(--mainMarginDesktop) var(--mainMarginDesktop) var(--mainMarginDesktop);
+  }
+  .content .content__div--competence .disactived h2 {
+    width: calc(100vw - var(--mainMarginDesktop) * 2);
+  }
+  .content .content__div--competence .content__div--webdesign {
+    margin-bottom: var(--mainMarginDesktop);
+  }
+  .content .content__div--competence .content__div--communication .content__div--communication--text {
+    width: calc(100vw - var(--mainMarginDesktop) * 2);
   }
 }/*# sourceMappingURL=content.css.map */
