@@ -78,16 +78,29 @@
             justify-content: space-between;
             width: 100%;
             .content__div--webdesign--text{
-                min-height: 250px;
-                min-width: 250px;
-                max-height: 250px;
-                width: 100%;
-                margin-right: var(--mainMarginDesktop);
-                background: var(--mainGreen);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 border-radius: 20px;
+                &.actived2{
+                    min-height: 250px;
+                    min-width: 250px;
+                    max-height: 250px;
+                    width: 100%;
+                    margin-right: var(--mainMarginDesktop);
+                    background: var(--mainGreen);
+                }
+                &.disactived2{
+                    min-height: 250px;
+                    min-width: 250px;
+                    max-height: 250px;
+                    max-width: 250px;
+                    margin-right: var(--mainMarginDesktop);
+                    width: 100%;
+                    background: url(http://localhost/portfolio/wp-content/uploads/2023/01/bckgrd-bug2-scaled.jpg) no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
                 .content__div--webdesign--p{
                     display: block;
                     padding: 0 var(--mainMarginDesktop);
@@ -135,16 +148,26 @@
         }
         .content__div--communication{
             .content__div--communication--text{
-                min-width: 250px;
-                min-height: 250px;
-                border-radius: 20px;
-                margin-left: var(--mainMarginDesktop);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                background: url(http://localhost/portfolio/wp-content/uploads/2023/01/bckgrd-bug1-1-scaled-e1673789660900.jpg) no-repeat;
-                background-size: cover;
-                background-position: center;
+                border-radius: 20px;
+                &.disactived2{
+                    min-width: 250px;
+                    min-height: 250px;
+                    margin-left: var(--mainMarginDesktop);
+                    background: url(http://localhost/portfolio/wp-content/uploads/2023/01/bckgrd-bug1-1-scaled-e1673789660900.jpg) no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+                &.actived2{
+                    min-height: 250px;
+                    min-width: 250px;
+                    max-height: 250px;
+                    width: calc(100vw - (calc(var(--mainMarginDesktop)*2 + var(--mainSizeNavbar)) + 250px + calc(var(--mainMarginDesktop) * 5)));
+                    margin-right: var(--mainMarginDesktop);
+                    background: var(--mainGreen);
+                }
                 .content__div--communication--p{
                     display: none;
                     padding: 0 var(--mainMarginDesktop);
@@ -169,6 +192,15 @@
     // }
     @media (max-width: 1400px){
         padding: var(--mainMarginDesktop) var(--mainMarginDesktop) var(--mainMarginDesktop) calc(var(--mainMarginDesktop)*2 + var(--mainSizeNavbar));
+        .content__div--competence{
+            .content__div--communication{
+                .content__div--communication--text{
+                    &.actived2{
+                        width: calc(100vw - (calc(var(--mainMarginDesktop)*2 + var(--mainSizeNavbar)) + 250px + calc(var(--mainMarginDesktop) * 2)));
+                    }
+                }
+            }
+        }
     }
     @media (max-width: 1250px){
         .content__div--competence{
@@ -185,13 +217,29 @@
             }
             .content__div--webdesign{
                 margin-bottom: var(--mainMarginDesktop);
+                .content__div--webdesign--text{
+                    &.disactived2{
+                        min-height: 0;
+                        min-width: 250px;
+                        max-height: 100%;
+                        height: calc(var(--mainMarginDesktop) * 4);
+                        max-width: 100%;
+                        margin-right: 0;
+                    }
+                }
             }
             .content__div--communication{
                 .content__div--communication--text{
-                    margin: 0;
-                    width: calc(100vw - (var(--mainMarginDesktop) + calc(var(--mainMarginDesktop)*2 + var(--mainSizeNavbar))));
-                    height: calc(var(--mainMarginDesktop) * 4);
-                    min-height: 0;
+                    &.disactived2{
+                        margin: 0;
+                        width: calc(100vw - (var(--mainMarginDesktop) + calc(var(--mainMarginDesktop)*2 + var(--mainSizeNavbar))));
+                        height: calc(var(--mainMarginDesktop) * 4);
+                        min-height: 0;
+                    }
+                    &.actived2{
+                        width: calc(100vw - (calc(var(--mainMarginDesktop)*2 + var(--mainSizeNavbar)) + var(--mainMarginDesktop)));
+                        margin-right: 0;
+                    }
                 }
             }
         }
@@ -209,7 +257,12 @@
             }
             .content__div--communication{
                 .content__div--communication--text{
-                    width: calc(100vw - calc(var(--mainMarginDesktop)*2));
+                    &.disactived2{
+                        width: calc(100vw - calc(var(--mainMarginDesktop)*2));
+                    }
+                    &.actived2{
+                        width: calc(100vw - calc(var(--mainMarginDesktop) * 2));
+                    }
                 }
             }
         }    
@@ -242,6 +295,9 @@
                     .content__div--webdesign--p{
                         padding: 0;
                     }
+                    &.disactived2{
+                        margin-bottom: 0;
+                    }
                 }
                 .content__div--webdesign--logo{
                     width: calc(100vw - calc(var(--mainMarginDesktop)*2));
@@ -254,9 +310,21 @@
                     }
                 }
             }
+            .content__div--communication{
+                .content__div--communication--text{
+                    &.actived2{
+                        margin-bottom: 0;
+                        max-height: 100%;
+                        padding: var(--mainMarginDesktop);
+                        .content__div--communication--p{
+                            padding: 0;
+                        }
+                    }
+                }
+            }
         }  
     }
-    @media (max-width: 400px){
+    @media (max-width: 450px){
         h1{
             font-size: 2rem;
         }
