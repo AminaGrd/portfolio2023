@@ -64,6 +64,7 @@
                 display: table-cell;
                 vertical-align: middle;
                 cursor: pointer;
+                text-shadow: 1px 1px 2px black;
                 &:hover{
                     transition: background-color .5s;
                     background-color: var(--mainDarkBlueAlpha2);
@@ -105,17 +106,19 @@
             }
             .content__div--webdesign--logo{
                 display: flex;
-                flex-direction: column;
+                flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
                 min-height: 250px;
                 min-width: 250px;
                 max-height: 250px;
+                width: 250px;
                 border: var(--mainDarkBlue) 3px solid;
                 border-radius: 20px;
                 >div{
                     display: flex;
                     flex-direction: row;
+                    padding: 0 var(--mainMarginDesktop);
                     figure{
                         margin: 0;
                         img{
@@ -210,5 +213,61 @@
                 }
             }
         }    
+    }
+    @media (max-width: 900px){
+        h1{
+            font-size: 2.8rem;
+        }
+        .content__presentation{
+            flex-direction: column;
+            .content__img--size{
+                margin-bottom: var(--mainMarginDesktop);
+            }
+            .content__text{
+                margin: 0;
+            }
+        }
+        .content__div--competence{
+            .actived{
+                h2{
+                    padding: 0;
+                }
+            }
+            .content__div--webdesign{
+                flex-direction: column;
+                .content__div--webdesign--text{
+                    margin-bottom: var(--mainMarginDesktop);
+                    max-height: 100%;
+                    padding: var(--mainMarginDesktop);
+                    .content__div--webdesign--p{
+                        padding: 0;
+                    }
+                }
+                .content__div--webdesign--logo{
+                    width: calc(100vw - calc(var(--mainMarginDesktop)*2));
+                    height: auto;
+                    min-height: auto;
+                    max-height: auto;
+                    padding: var(--mainMarginDesktop);
+                    >div{
+                        padding: 0;
+                    }
+                }
+            }
+        }  
+    }
+    @media (max-width: 400px){
+        h1{
+            font-size: 2rem;
+        }
+        h2{
+            font-size: 1.2rem;
+        }
+        p{
+            font-size: 0.8rem;
+        }
+        li{
+            font-size: 0.8rem;
+        }
     }
 }
