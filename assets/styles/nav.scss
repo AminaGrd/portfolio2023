@@ -40,12 +40,15 @@ nav{
                 justify-content: center;
                 align-items: center;
                 width: calc(var(--mainSizeNavbar)/2);
-            }
-            .current_page_item{
-                a{
-                    text-decoration: underline var(--mainGreen);
-                    text-underline-position: under;
+                .sub-menu{
+                    .current_page_item{
+                        a{
+                            text-decoration: underline var(--mainGreen);
+                            text-underline-position: under;
+                        }
+                    }
                 }
+                
             }
         }
     }
