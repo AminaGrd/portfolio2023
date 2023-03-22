@@ -44,7 +44,7 @@ nav .menu-navbar-container #menu-navbar .menu-item-has-children {
 nav .menu-navbar-container #menu-navbar .menu-item-has-children > a {
   display: none;
 }
-nav .menu-navbar-container #menu-navbar .current_page_item a {
+nav .menu-navbar-container #menu-navbar .menu-item-has-children .sub-menu .current_page_item a {
   -webkit-text-decoration: underline var(--mainGreen);
           text-decoration: underline var(--mainGreen);
   text-underline-position: under;
@@ -71,23 +71,17 @@ nav .menu-navbar-container #menu-navbar .current_page_item a {
     display: block;
     order: 3;
     min-width: 100vw;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-name: showMenu;
-            animation-name: showMenu;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-name: showMenu;
+    animation-fill-mode: forwards;
   }
   nav .menu-navbar-container.menu-navbar-container--unshow {
     display: block;
     order: 3;
     min-width: 100vw;
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-name: unshowMenu;
-            animation-name: unshowMenu;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-name: unshowMenu;
+    animation-fill-mode: forwards;
   }
   nav .nav__burger {
     cursor: pointer;
@@ -112,61 +106,34 @@ nav .menu-navbar-container #menu-navbar .current_page_item a {
     width: 50px;
   }
   nav .nav__burger.nav__burger--cross div:nth-child(1) {
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-name: crossMenu1;
-            animation-name: crossMenu1;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-name: crossMenu1;
+    animation-fill-mode: forwards;
   }
   nav .nav__burger.nav__burger--cross div:nth-child(2) {
-    -webkit-animation-duration: 0.05s;
-            animation-duration: 0.05s;
-    -webkit-animation-name: crossMenu2;
-            animation-name: crossMenu2;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-duration: 0.05s;
+    animation-name: crossMenu2;
+    animation-fill-mode: forwards;
   }
   nav .nav__burger.nav__burger--cross div:nth-child(3) {
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-name: crossMenu3;
-            animation-name: crossMenu3;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-name: crossMenu3;
+    animation-fill-mode: forwards;
   }
   nav .nav__burger.nav__burger--burger div:nth-child(1) {
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-name: burgerMenu1;
-            animation-name: burgerMenu1;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-duration: 0.5s;
+    animation-name: burgerMenu1;
+    animation-fill-mode: both;
   }
   nav .nav__burger.nav__burger--burger div:nth-child(2) {
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-name: burgerMenu2;
-            animation-name: burgerMenu2;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
+    animation-duration: 0.5s;
+    animation-name: burgerMenu2;
+    animation-fill-mode: both;
   }
   nav .nav__burger.nav__burger--burger div:nth-child(3) {
-    -webkit-animation-duration: 0.5s;
-            animation-duration: 0.5s;
-    -webkit-animation-name: burgerMenu3;
-            animation-name: burgerMenu3;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-  }
-}
-
-@-webkit-keyframes showMenu {
-  from {
-    top: -500px;
-  }
-  to {
-    top: 0;
+    animation-duration: 0.5s;
+    animation-name: burgerMenu3;
+    animation-fill-mode: both;
   }
 }
 
@@ -178,30 +145,12 @@ nav .menu-navbar-container #menu-navbar .current_page_item a {
     top: 0;
   }
 }
-@-webkit-keyframes unshowMenu {
-  from {
-    top: 0;
-  }
-  to {
-    top: -500px;
-  }
-}
 @keyframes unshowMenu {
   from {
     top: 0;
   }
   to {
     top: -500px;
-  }
-}
-@-webkit-keyframes crossMenu1 {
-  from {
-    transform: rotate(0deg) translate(0px, 0px);
-    background-color: var(--mainDarkBlue);
-  }
-  to {
-    transform: rotate(45deg) translate(9px, 9px);
-    background-color: white;
   }
 }
 @keyframes crossMenu1 {
@@ -214,30 +163,12 @@ nav .menu-navbar-container #menu-navbar .current_page_item a {
     background-color: white;
   }
 }
-@-webkit-keyframes crossMenu2 {
-  from {
-    opacity: 100;
-  }
-  to {
-    opacity: 0;
-  }
-}
 @keyframes crossMenu2 {
   from {
     opacity: 100;
   }
   to {
     opacity: 0;
-  }
-}
-@-webkit-keyframes crossMenu3 {
-  from {
-    transform: rotate(0deg) translate(0px, 0px);
-    background-color: var(--mainDarkBlue);
-  }
-  to {
-    transform: rotate(-45deg) translate(9px, -9px);
-    background-color: white;
   }
 }
 @keyframes crossMenu3 {
@@ -250,16 +181,6 @@ nav .menu-navbar-container #menu-navbar .current_page_item a {
     background-color: white;
   }
 }
-@-webkit-keyframes burgerMenu1 {
-  from {
-    transform: rotate(45deg) translate(9px, 9px);
-    background-color: white;
-  }
-  to {
-    transform: rotate(0deg) translate(0px, 0px);
-    background-color: var(--mainDarkBlue);
-  }
-}
 @keyframes burgerMenu1 {
   from {
     transform: rotate(45deg) translate(9px, 9px);
@@ -270,30 +191,12 @@ nav .menu-navbar-container #menu-navbar .current_page_item a {
     background-color: var(--mainDarkBlue);
   }
 }
-@-webkit-keyframes burgerMenu2 {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 100;
-  }
-}
 @keyframes burgerMenu2 {
   from {
     opacity: 0;
   }
   to {
     opacity: 100;
-  }
-}
-@-webkit-keyframes burgerMenu3 {
-  from {
-    transform: rotate(-45deg) translate(9px, -9px);
-    background-color: white;
-  }
-  to {
-    transform: rotate(0deg) translate(0px, 0px);
-    background-color: var(--mainDarkBlue);
   }
 }
 @keyframes burgerMenu3 {

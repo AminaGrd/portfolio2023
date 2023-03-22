@@ -31,8 +31,8 @@
             $tyler_query = new WP_Query( $args );
             
             // loop through found posts
-            if ($tyler_query->have_posts() || $category_id = 3) {
-                while ( $tyler_query->have_posts() || $category_id = 3) {
+            if ($tyler_query->have_posts()) {
+                while ( $tyler_query->have_posts()) {
                     $tyler_query->the_post();
                     //Post item -->
                     ?><div class="swiper-slide">
@@ -48,6 +48,9 @@
                             </div>
                             <div class="cs-post-resume">
                                 <h3><?php the_excerpt();?></h3>
+                            </div>
+                            <div class="cs-post-button">
+                                <h3><a href="<?php the_permalink(); ?>">Voir le projet</a></h3>
                             </div>
                         </div>
                     </div><?php
