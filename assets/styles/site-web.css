@@ -27,7 +27,7 @@
 .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .prev-slide, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .next-slide {
   width: 300px;
   height: 175px;
-  background-color: var(--mainDarkBlueAlpha3);
+  background-color: var(--mainDarkGreen);
   border-radius: 20px;
   cursor: pointer;
   transition: transform 0.5s;
@@ -94,7 +94,7 @@
   flex-direction: row;
 }
 .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button .cs-post-resume {
-  background-color: var(--mainDarkGreen);
+  background-color: var(--mainDarkBlue);
   color: white;
   border-radius: 20px;
   width: 96%;

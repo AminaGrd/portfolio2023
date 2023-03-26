@@ -31,7 +31,7 @@
                         .prev-slide, .next-slide{
                             width: 300px;
                             height: 175px;
-                            background-color: var(--mainDarkBlueAlpha3);
+                            background-color: var(--mainDarkGreen);
                             border-radius: 20px;
                             cursor: pointer;
                             transition: transform 0.5s;
@@ -104,7 +104,7 @@
                         display: flex;
                         flex-direction: row;
                         .cs-post-resume{
-                            background-color: var(--mainDarkGreen);
+                            background-color: var(--mainDarkBlue);
                             color: white;
                             border-radius: 20px;
                             width: 96%;
