@@ -32,6 +32,11 @@ nav .menu-navbar-container #menu-navbar > li a {
   color: white;
   font-size: 1.2rem;
 }
+nav .menu-navbar-container #menu-navbar > li a:hover {
+  -webkit-text-decoration: underline var(--mainGreen);
+          text-decoration: underline var(--mainGreen);
+  text-underline-position: under;
+}
 nav .menu-navbar-container #menu-navbar .menu-item-has-children {
   padding: 1rem 0;
   border-top: white solid 2px;

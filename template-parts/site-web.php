@@ -22,9 +22,9 @@
                                 <a href="<?php the_permalink(); ?>"></i></a>
                             </div>
                             <div class="cs-post-thumb">
-                                <div class="prev-slide" onclick="plusSlides(-1)"></div>
+                                <div class="prev-slide" onclick="plusSlides(-1)"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/site-web/laptop.svg" alt="laptop"></div>
                                 <a href="<?php the_permalink();?>"><img src="<?php the_post_thumbnail_url();?>" alt="<?php the_title();?>"></a>
-                                <div class="next-slide" onclick="plusSlides(1)"></div>
+                                <div class="next-slide" onclick="plusSlides(1)"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/site-web/laptop.svg" alt="laptop"></div>
                             </div>
                             <div class="cs-post-inner">
                                 <a class="prev" onclick="plusSlides(-1)">&#8678;</a>

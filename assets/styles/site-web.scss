@@ -13,17 +13,19 @@
                         flex-direction: row;
                         justify-content: center;
                         align-items: center;
-                        img{
-                            width: 500px;
-                            min-width: 250px;
-                            height: 250px;
-                            object-fit: cover;
-                            border-radius: 20px;
-                            margin-right: calc(var(--mainMarginDesktop) - 10px);
-                            margin-left: calc(var(--mainMarginDesktop) - 10px);
-                            transition: transform 0.5s;
-                            &:hover{
-                                transform: scale(1.05);
+                        a{
+                            img{
+                                width: 500px;
+                                min-width: 250px;
+                                height: 250px;
+                                object-fit: cover;
+                                border-radius: 20px;
+                                margin-right: calc(var(--mainMarginDesktop) - 10px);
+                                margin-left: calc(var(--mainMarginDesktop) - 10px);
+                                transition: transform 0.5s;
+                                &:hover{
+                                    transform: scale(1.05);
+                                }
                             }
                         }
                         .prev-slide, .next-slide{
@@ -33,6 +35,16 @@
                             border-radius: 20px;
                             cursor: pointer;
                             transition: transform 0.5s;
+                            display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            img{
+                                width: 100px;
+                                height: auto;
+                                &:hover{
+                                    transform: scale(1.0) translate(0, 0);
+                                }
+                            }
                         }
                         .prev-slide{
                             &:hover{
@@ -141,6 +153,11 @@
                         }
                     }
                     @media (max-width: 1250px){
+                        .cs-post-thumb{
+                            .prev-slide, .next-slide{
+                                display: none;
+                            }
+                        }
                         .cs-post-resume-button{
                             flex-direction: column;
                             .cs-post-resume{
@@ -179,9 +196,11 @@
                     }
                     @media (max-width: 600px){
                         .cs-post-thumb{
-                            img{
-                                width: 240px;
-                            }
+                            a{
+                                img{
+                                    width: 240px;
+                                }
+                            } 
                         }
                         .cs-post-inner{
                             h2{

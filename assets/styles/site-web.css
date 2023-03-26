@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
 }
-.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb img {
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb a img {
   width: 500px;
   min-width: 250px;
   height: 250px;
@@ -21,7 +21,7 @@
   margin-left: calc(var(--mainMarginDesktop) - 10px);
   transition: transform 0.5s;
 }
-.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb img:hover {
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb a img:hover {
   transform: scale(1.05);
 }
 .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .prev-slide, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .next-slide {
@@ -31,6 +31,16 @@
   border-radius: 20px;
   cursor: pointer;
   transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .prev-slide img, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .next-slide img {
+  width: 100px;
+  height: auto;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .prev-slide img:hover, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .next-slide img:hover {
+  transform: scale(1) translate(0, 0);
 }
 .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .prev-slide:hover {
   transform: scale(1.05) translate(-10px, 0);
@@ -122,6 +132,9 @@
   }
 }
 @media (max-width: 1250px) {
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .prev-slide, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .next-slide {
+    display: none;
+  }
   .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button {
     flex-direction: column;
   }
@@ -153,7 +166,7 @@
   }
 }
 @media (max-width: 600px) {
-  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb img {
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb a img {
     width: 240px;
   }
   .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner h2 {
