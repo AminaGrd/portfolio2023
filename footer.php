@@ -12,6 +12,6 @@
     </footer>
     <script src="<?php bloginfo('template_directory'); ?>/assets/scripts/nav.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/assets/scripts/btn-presentation.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/assets/scripts/carrousel-realisation.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/assets/scripts/slide-show.js"></script>
 </body>
 </html>

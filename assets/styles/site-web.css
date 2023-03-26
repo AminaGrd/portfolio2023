@@ -1,3 +1,23 @@
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide {
+  display: none;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) {
+  display: block;
+}
 .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide img {
   width: 50px;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .prev, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .next {
+  cursor: pointer;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=site-web.css.map */

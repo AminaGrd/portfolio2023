@@ -4,9 +4,25 @@
         .swiper-container{
             .swiper-wrapper{
                 .swiper-slide{
+                    display: none;
+                    &:nth-child(1){
+                        display: block;
+                    }
                     img{
                         width: 50px;
                     }
+                    .prev, .next {
+                        cursor: pointer;
+                        width: auto;
+                        padding: 16px;
+                        margin-top: -22px;
+                        color: black;
+                        font-weight: bold;
+                        font-size: 18px;
+                        transition: 0.6s ease;
+                        border-radius: 0 3px 3px 0;
+                        user-select: none;
+                      }
                 }
             }
         }
