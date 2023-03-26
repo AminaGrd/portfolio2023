@@ -8,21 +8,188 @@
                     &:nth-child(1){
                         display: block;
                     }
-                    img{
-                        width: 50px;
+                    .cs-post-thumb{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        img{
+                            width: 500px;
+                            min-width: 250px;
+                            height: 250px;
+                            object-fit: cover;
+                            border-radius: 20px;
+                            margin-right: calc(var(--mainMarginDesktop) - 10px);
+                            margin-left: calc(var(--mainMarginDesktop) - 10px);
+                            transition: transform 0.5s;
+                            &:hover{
+                                transform: scale(1.05);
+                            }
+                        }
+                        .prev-slide, .next-slide{
+                            width: 300px;
+                            height: 175px;
+                            background-color: var(--mainDarkBlueAlpha3);
+                            border-radius: 20px;
+                            cursor: pointer;
+                            transition: transform 0.5s;
+                        }
+                        .prev-slide{
+                            &:hover{
+                                transform: scale(1.05) translate(-10px, 0);
+                            }
+                        }
+                        .next-slide{
+                            &:hover{
+                                transform: scale(1.05) translate(10px, 0);
+                            }
+                        }
                     }
-                    .prev, .next {
-                        cursor: pointer;
-                        width: auto;
-                        padding: 16px;
-                        margin-top: -22px;
-                        color: black;
-                        font-weight: bold;
-                        font-size: 18px;
-                        transition: 0.6s ease;
-                        border-radius: 0 3px 3px 0;
-                        user-select: none;
-                      }
+                    .cs-post-inner{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: calc(var(--mainMarginDesktop)/2);
+                        margin-bottom: var(--mainMarginDesktop);
+                        h2{
+                            color: var(--mainDarkBlue);
+                            font-size: 1.5rem;
+                            width: 400px;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                        .prev, .next {
+                            cursor: pointer;
+                            width: 40px;
+                            height: 40px;
+                            color: var(--mainDarkBlue);
+                            font-weight: bold;
+                            font-size: 24px;
+                            transition: 0.6s ease;
+                            border: 3px var(--mainDarkBlue) solid;
+                            border-radius: 100px;
+                            user-select: none;
+                            text-align: center;
+                            transition: transform .2s;
+                            &:hover{
+                                background-color: var(--mainDarkBlue);
+                                color: white;
+                            }
+                        }
+                        .prev{
+                            &:hover{
+                                transform: translate(-5px, 0);
+                            }
+                        }
+                        .next{
+                            &:hover{
+                                transform: translate(5px, 0);
+                            }
+                        }
+                    }
+                    .cs-post-resume-button{
+                        display: flex;
+                        flex-direction: row;
+                        .cs-post-resume{
+                            background-color: var(--mainDarkGreen);
+                            color: white;
+                            border-radius: 20px;
+                            width: 96%;
+                            position: relative;
+                            z-index: 1;
+                            height: calc(var(--mainSizeNavbar) - var(--mainMarginDesktop));
+                            transition: width 1s;
+                            padding: var(--mainMarginDesktop);
+                            display: flex;
+                            align-items: center;
+                        }
+                        .cs-post-button{
+                            a{
+                                background-color: var(--mainGreen);
+                                color: var(--mainDarkBlue);
+                                border-radius: 20px;
+                                width: 18%;
+                                position: absolute;
+                                z-index: 0;
+                                right: calc(var(--mainMarginDesktop) * 4);
+                                height: calc(var(--mainSizeNavbar) - var(--mainMarginDesktop));
+                                text-align: center;
+                                padding-top: 60px;
+                                padding-left: var(--mainMarginDesktop);
+                                font-size: 1.2rem;
+                            }
+                        }
+                        &:hover{
+                            .cs-post-resume{
+                                width: 80%;
+                            }
+                        }
+                    }
+                    @media (max-width: 1400px){
+                        .cs-post-resume-button{
+                            .cs-post-button{
+                                a{
+                                    right: var(--mainMarginDesktop);
+                                }
+                            }
+                            &:hover{
+                                .cs-post-resume{
+                                    width: 81%;
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 1250px){
+                        .cs-post-resume-button{
+                            flex-direction: column;
+                            .cs-post-resume{
+                                width: 100%;
+                                height: calc(var(--mainSizeNavbar) - var(--mainMarginDesktop));
+                                margin-bottom: var(--mainMarginDesktop);
+                            }
+                            .cs-post-button{
+                                a{
+                                    width: 100%;
+                                    position: relative;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    z-index: 1;
+                                    right: 0;
+                                    height: calc(var(--mainMarginDesktop) * 2);
+                                    padding: 0;
+                                }
+                            }
+                            &:hover{
+                                .cs-post-resume{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 1000px){
+                        .cs-post-resume-button{
+                            .cs-post-resume{
+                                width: 100%;
+                                height: auto;
+                                padding: var(--mainMarginDesktop);
+                            }
+                        }
+                    }
+                    @media (max-width: 600px){
+                        .cs-post-thumb{
+                            img{
+                                width: 240px;
+                            }
+                        }
+                        .cs-post-inner{
+                            h2{
+                                font-size: 1.2rem;
+                                width: 150px;
+                            }
+                        }
+                    }
                 }
             }
         }

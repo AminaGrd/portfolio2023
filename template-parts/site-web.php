@@ -22,20 +22,25 @@
                                 <a href="<?php the_permalink(); ?>"></i></a>
                             </div>
                             <div class="cs-post-thumb">
+                                <div class="prev-slide" onclick="plusSlides(-1)"></div>
                                 <a href="<?php the_permalink();?>"><img src="<?php the_post_thumbnail_url();?>" alt="<?php the_title();?>"></a>
+                                <div class="next-slide" onclick="plusSlides(1)"></div>
                             </div>
                             <div class="cs-post-inner">
-                                <h3><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h3>
+                                <a class="prev" onclick="plusSlides(-1)">&#8678;</a>
+                                <h2><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h2>
+                                <a class="next" onclick="plusSlides(1)">&#8680;</a>  
                             </div>
-                            <div class="cs-post-resume">
-                                <h3><?php the_excerpt();?></h3>
+                            <div class="cs-post-resume-button">
+                                <div class="cs-post-resume">
+                                    <p><?php the_excerpt();?></p>
+                                </div>
+                                <div class="cs-post-button">
+                                    <a href="<?php the_permalink(); ?>">Voir le projet</a>
+                                </div>
                             </div>
-                            <div class="cs-post-button">
-                                <h3><a href="<?php the_permalink(); ?>">Voir le projet</a></h3>
-                            </div>
+                            
                         </div>
-                        <a class="prev" onclick="plusSlides(-1)">❮</a>
-                        <a class="next" onclick="plusSlides(1)">❯</a>
                     </div><?php
                 }
             }

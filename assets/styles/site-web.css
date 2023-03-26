@@ -4,20 +4,160 @@
 .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide:nth-child(1) {
   display: block;
 }
-.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide img {
-  width: 50px;
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .prev, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .next {
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb img {
+  width: 500px;
+  min-width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  margin-right: calc(var(--mainMarginDesktop) - 10px);
+  margin-left: calc(var(--mainMarginDesktop) - 10px);
+  transition: transform 0.5s;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb img:hover {
+  transform: scale(1.05);
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .prev-slide, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .next-slide {
+  width: 300px;
+  height: 175px;
+  background-color: var(--mainDarkBlueAlpha3);
+  border-radius: 20px;
   cursor: pointer;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: black;
+  transition: transform 0.5s;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .prev-slide:hover {
+  transform: scale(1.05) translate(-10px, 0);
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .next-slide:hover {
+  transform: scale(1.05) translate(10px, 0);
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(var(--mainMarginDesktop) / 2);
+  margin-bottom: var(--mainMarginDesktop);
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner h2 {
+  color: var(--mainDarkBlue);
+  font-size: 1.5rem;
+  width: 400px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner .prev, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner .next {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  color: var(--mainDarkBlue);
   font-weight: bold;
-  font-size: 18px;
+  font-size: 24px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border: 3px var(--mainDarkBlue) solid;
+  border-radius: 100px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner .prev:hover, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner .next:hover {
+  background-color: var(--mainDarkBlue);
+  color: white;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner .prev:hover {
+  transform: translate(-5px, 0);
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner .next:hover {
+  transform: translate(5px, 0);
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button {
+  display: flex;
+  flex-direction: row;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button .cs-post-resume {
+  background-color: var(--mainDarkGreen);
+  color: white;
+  border-radius: 20px;
+  width: 96%;
+  position: relative;
+  z-index: 1;
+  height: calc(var(--mainSizeNavbar) - var(--mainMarginDesktop));
+  transition: width 1s;
+  padding: var(--mainMarginDesktop);
+  display: flex;
+  align-items: center;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button .cs-post-button a {
+  background-color: var(--mainGreen);
+  color: var(--mainDarkBlue);
+  border-radius: 20px;
+  width: 18%;
+  position: absolute;
+  z-index: 0;
+  right: calc(var(--mainMarginDesktop) * 4);
+  height: calc(var(--mainSizeNavbar) - var(--mainMarginDesktop));
+  text-align: center;
+  padding-top: 60px;
+  padding-left: var(--mainMarginDesktop);
+  font-size: 1.2rem;
+}
+.content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button:hover .cs-post-resume {
+  width: 80%;
+}
+@media (max-width: 1400px) {
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button .cs-post-button a {
+    right: var(--mainMarginDesktop);
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button:hover .cs-post-resume {
+    width: 81%;
+  }
+}
+@media (max-width: 1250px) {
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button {
+    flex-direction: column;
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button .cs-post-resume {
+    width: 100%;
+    height: calc(var(--mainSizeNavbar) - var(--mainMarginDesktop));
+    margin-bottom: var(--mainMarginDesktop);
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button .cs-post-button a {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    right: 0;
+    height: calc(var(--mainMarginDesktop) * 2);
+    padding: 0;
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button:hover .cs-post-resume {
+    width: 100%;
+  }
+}
+@media (max-width: 1000px) {
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button .cs-post-resume {
+    width: 100%;
+    height: auto;
+    padding: var(--mainMarginDesktop);
+  }
+}
+@media (max-width: 600px) {
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb img {
+    width: 240px;
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner h2 {
+    font-size: 1.2rem;
+    width: 150px;
+  }
 }/*# sourceMappingURL=site-web.css.map */

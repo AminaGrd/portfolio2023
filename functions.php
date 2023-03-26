@@ -64,6 +64,6 @@ add_action(
 );
 
 function custom_excerpt_length( $length ) {
-      return 40;
+      return 60;
   }
   add_filter( 'excerpt_length', 'custom_excerpt_length', 99 );
