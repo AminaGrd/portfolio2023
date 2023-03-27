@@ -7,6 +7,7 @@
                 'posts_per_page' => 20, // your 'x' goes here
                 'nopaging' => true
                 // possibly more arguments here
+                'cat' => 3, //(int) - use category id
             );
             // set up new query
             $tyler_query = new WP_Query( $args );
