@@ -4,5 +4,5 @@
 $catsection =  get_the_category(); 
 $numcat0 = $catsection[0]->cat_name ; // renvoi nom de categorie (la premiere si plusieurs)
 ?>
-
+<?= the_content(); ?>
 <?php get_footer(); ?>

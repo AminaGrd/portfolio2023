@@ -2,6 +2,14 @@
             if($page === 85) {
             get_template_part( 'template-parts/site-web' );?>
         <?php }; ?>
+        <?php $page = get_the_ID();
+            if($page === 89) {
+            get_template_part( 'template-parts/maquette' );?>
+        <?php }; ?>
+        <?php $page = get_the_ID();
+            if($page === 87) {
+            get_template_part( 'template-parts/illustration' );?>
+        <?php }; ?>
     </div><!-- fin div.content -->
     <footer>
         <div class="footer__contact">
