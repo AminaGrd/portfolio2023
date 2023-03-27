@@ -5,7 +5,7 @@
             // define query arguments
             $args = array(
                 'posts_per_page' => 20, // your 'x' goes here
-                'nopaging' => true
+                'nopaging' => true,
                 // possibly more arguments here
                 'cat' => 3, //(int) - use category id
             );
