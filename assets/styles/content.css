@@ -176,6 +176,81 @@
 .content .content__div--competence .content__div--communication .content__div--communication--text .content__div--communication--p > ul > li ul li {
   color: var(--mainDarkBlue);
 }
+.content .wpcf7-form {
+  width: 100%;
+  background-color: var(--mainDarkGreen);
+  border-radius: 20px;
+  padding: var(--mainMarginDesktop);
+  display: flex;
+  flex-direction: column;
+}
+.content .wpcf7-form .contact-who {
+  display: flex;
+  flex-direction: row;
+}
+.content .wpcf7-form .contact-who p {
+  width: 50%;
+}
+.content .wpcf7-form .contact-who p:first-child {
+  margin-right: calc(var(--mainMarginDesktop) / 2);
+}
+.content .wpcf7-form .contact-who p:last-child {
+  margin-left: calc(var(--mainMarginDesktop) / 2);
+}
+.content .wpcf7-form p {
+  color: white;
+}
+.content .wpcf7-form p label span input {
+  color: var(--mainDarkBlue);
+  background-color: var(--mainDarkGreenLight);
+  width: 100%;
+  min-height: var(--mainMarginDesktop);
+  padding-left: 5px;
+  margin-top: 5px;
+}
+.content .wpcf7-form p label span input:focus {
+  background-color: white;
+}
+.content .wpcf7-form p label span textarea {
+  color: var(--mainDarkBlue);
+  background-color: var(--mainDarkGreenLight);
+  width: 100%;
+  min-height: var(--mainMarginDesktop);
+  padding-left: 5px;
+  padding-top: 3px;
+  margin-top: 5px;
+}
+.content .wpcf7-form p label span textarea:focus {
+  background-color: white;
+}
+.content .wpcf7-form > p {
+  margin-top: var(--mainMarginDesktop);
+}
+.content .wpcf7-form .contact-send p {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--mainMarginDesktop);
+}
+.content .wpcf7-form .contact-send p .wpcf7-submit {
+  padding: 15px 40px;
+  background-color: var(--mainDarkGreenLight);
+}
+.content .wpcf7-form .contact-send p .wpcf7-submit:hover {
+  background-color: var(--mainGreen);
+}
+.content .error-text {
+  margin-bottom: var(--mainMarginDesktop);
+}
+.content .error-return-home {
+  padding: 5px 20px;
+  background-color: var(--mainDarkGreen);
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+.content .error-return-home:hover {
+  background-color: var(--mainGreen);
+}
 @media (max-width: 1400px) {
   .content {
     padding: var(--mainMarginDesktop) var(--mainMarginDesktop) var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar));

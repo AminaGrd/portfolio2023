@@ -185,11 +185,88 @@
                 }
             }
         }
+    } 
+    .wpcf7-form {
+        width: 100%;
+        background-color: var(--mainDarkGreen);
+        border-radius: 20px;
+        padding: var(--mainMarginDesktop);
+        display: flex;
+        flex-direction: column;
+        .contact-who{
+            display: flex;
+            flex-direction: row;
+            p{
+                width: 50%;
+                &:first-child{
+                    margin-right: calc(var(--mainMarginDesktop) /2);
+                }
+                &:last-child{
+                    margin-left: calc(var(--mainMarginDesktop) /2);
+                }
+            }
+        }
+        p{
+            color: white;
+            label{
+                span{
+                    input{
+                        color: var(--mainDarkBlue);
+                        background-color: var(--mainDarkGreenLight);
+                        width: 100%;
+                        min-height: var(--mainMarginDesktop);
+                        padding-left: 5px;
+                        margin-top: 5px;
+                        &:focus{
+                            background-color: white;
+                        }
+                    }
+                    textarea{
+                        color: var(--mainDarkBlue);
+                        background-color: var(--mainDarkGreenLight);
+                        width: 100%;
+                        min-height: var(--mainMarginDesktop);
+                        padding-left: 5px;
+                        padding-top: 3px;
+                        margin-top: 5px;
+                        &:focus{
+                            background-color: white;
+                        } 
+                    }
+                }
+            }
+        }
+        >p{
+            margin-top: var(--mainMarginDesktop);
+        }
+        .contact-send{
+            p{
+                display: flex;
+                justify-content: flex-end;
+                margin-top: var(--mainMarginDesktop);
+                .wpcf7-submit{
+                    padding: 15px 40px;
+                    background-color: var(--mainDarkGreenLight);
+                    &:hover{
+                        background-color: var(--mainGreen);
+                    }
+                }
+            }
+        }
     }
-    
-    // .form.wpcf7-form {
-    //     // vise form de contact form 7
-    // }
+    .error-text{
+        margin-bottom: var(--mainMarginDesktop);
+    }
+    .error-return-home{
+        padding: 5px 20px;
+        background-color: var(--mainDarkGreen);
+        color: white;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        &:hover{
+            background-color: var(--mainGreen);
+        }
+    }
     @media (max-width: 1400px){
         padding: var(--mainMarginDesktop) var(--mainMarginDesktop) var(--mainMarginDesktop) calc(var(--mainMarginDesktop)*2 + var(--mainSizeNavbar));
         .content__div--competence{
