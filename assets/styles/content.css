@@ -227,7 +227,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 .content .wpcf7-form .contact-who {
   display: flex;
@@ -426,6 +426,22 @@
     padding: 0;
   }
 }
+@media (max-width: 750px) {
+  .content .contact-infos > div {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content .contact-infos > div:last-child {
+    margin-top: calc(var(--mainMarginDesktop) + var(--mainMarginDesktop) / 2);
+  }
+  .content .contact-infos > div > div {
+    justify-content: center;
+    width: 100%;
+  }
+  .content .contact-infos > div > div:last-child {
+    margin-top: calc(var(--mainMarginDesktop) + var(--mainMarginDesktop) / 2);
+  }
+}
 @media (max-width: 450px) {
   .content h1 {
     font-size: 2rem;
@@ -439,7 +455,54 @@
   .content li {
     font-size: 0.9rem;
   }
+  .content .contact-infos {
+    flex-direction: row;
+    width: 100%;
+  }
+  .content .contact-infos > div {
+    flex-direction: row;
+    width: 66.6%;
+  }
+  .content .contact-infos > div:last-child {
+    margin-top: 0;
+  }
+  .content .contact-infos > div > div .contact-logo {
+    margin: 0;
+  }
+  .content .contact-infos > div > div .contact-logo img {
+    max-height: calc(var(--mainMarginDesktop) + var(--mainMarginDesktop) / 4);
+    min-width: calc(var(--mainMarginDesktop) + var(--mainMarginDesktop) / 4);
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .content .contact-infos > div > div p {
+    display: none;
+  }
+  .content .contact-infos > div > div .contact-share {
+    display: none;
+  }
+  .content .contact-infos > div > div:last-child {
+    margin-top: 0;
+  }
+  .content .contact-infos > div .contact-where {
+    display: none;
+  }
+  .content .contact-infos > div:last-child {
+    width: 33.3%;
+  }
   .content .wpcf7-form {
     padding: calc(var(--mainMarginDesktop) - var(--mainMarginDesktop) / 3);
+  }
+}
+@media (max-width: 350px) {
+  .content .contact-infos {
+    flex-direction: column;
+  }
+  .content .contact-infos > div {
+    width: 100%;
+  }
+  .content .contact-infos > div:last-child {
+    width: 100%;
+    margin-top: var(--mainMarginDesktop);
   }
 }/*# sourceMappingURL=content.css.map */

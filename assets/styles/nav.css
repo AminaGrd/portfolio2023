@@ -71,7 +71,7 @@ nav .menu-navbar-container #menu-navbar .menu-item-has-children .sub-menu .curre
     display: none;
     position: absolute;
     background-color: var(--mainDarkBlueAlpha);
-    z-index: 0;
+    z-index: 2;
     padding: var(--mainMarginDesktop) 0;
   }
   nav .menu-navbar-container #menu-navbar {
@@ -101,7 +101,8 @@ nav .menu-navbar-container #menu-navbar .menu-item-has-children .sub-menu .curre
     height: 30px;
     margin-top: 20px;
     margin-left: var(--mainMarginDesktop);
-    z-index: 2;
+    position: absolute;
+    z-index: 3;
   }
   nav .nav__burger > div {
     height: 3px;

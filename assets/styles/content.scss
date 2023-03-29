@@ -238,7 +238,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
-        z-index: -1;
+        z-index: 0;
         .contact-who{
             display: flex;
             flex-direction: row;
@@ -473,6 +473,24 @@
             }
         }  
     }
+    @media (max-width: 750px){
+        .contact-infos{
+            >div{
+                flex-direction: column;
+                justify-content: center;
+                &:last-child{
+                    margin-top: calc(var(--mainMarginDesktop) + (var(--mainMarginDesktop) / 2));
+                }
+                >div{
+                    justify-content: center;
+                    width: 100%;
+                    &:last-child{
+                        margin-top: calc(var(--mainMarginDesktop) + (var(--mainMarginDesktop) / 2));
+                    }
+                }
+            }
+        }
+    }
     @media (max-width: 450px){
         h1{
             font-size: 2rem;
@@ -486,8 +504,56 @@
         li{
             font-size: 0.9rem;
         }
+        .contact-infos{
+            flex-direction: row;
+            width: 100%;
+            >div{
+                flex-direction: row;
+                width: 66.6%;
+                &:last-child{
+                    margin-top: 0;
+                }
+                >div{
+                    .contact-logo{
+                        margin: 0;
+                        img{
+                            max-height: calc(var(--mainMarginDesktop) + (var(--mainMarginDesktop) / 4));
+                            min-width: calc(var(--mainMarginDesktop) + (var(--mainMarginDesktop) / 4));
+                            object-fit: contain;
+                        }
+                    }
+                    p{
+                        display: none;
+                    }
+                    .contact-share{
+                        display: none;
+                    }
+                    &:last-child{
+                        margin-top: 0;
+                    }
+                }
+                .contact-where{
+                    display: none;
+                }
+                &:last-child{
+                    width: 33.3%;
+                }
+            }
+        }
         .wpcf7-form{
             padding: calc(var(--mainMarginDesktop) - (var(--mainMarginDesktop) / 3));
+        }
+    }
+    @media (max-width: 350px){
+        .contact-infos{
+            flex-direction: column;
+            >div{
+                width: 100%;
+                &:last-child{
+                    width: 100%;
+                    margin-top: var(--mainMarginDesktop);
+                }
+            }
         }
     }
 }
