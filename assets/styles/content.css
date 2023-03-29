@@ -176,6 +176,49 @@
 .content .content__div--competence .content__div--communication .content__div--communication--text .content__div--communication--p > ul > li ul li {
   color: var(--mainDarkBlue);
 }
+.content .contact-infos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: solid 3px var(--mainGreen);
+  padding: var(--mainMarginDesktop);
+  border-radius: 20px;
+  margin-bottom: var(--mainMarginDesktop);
+}
+.content .contact-infos > div {
+  display: flex;
+  flex-direction: row;
+}
+.content .contact-infos > div:last-child {
+  margin-top: calc(var(--mainMarginDesktop) * 2);
+}
+.content .contact-infos > div > div {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.content .contact-infos > div > div .contact-logo {
+  margin: 0 10px 0 0;
+}
+.content .contact-infos > div > div .contact-logo img {
+  max-height: calc(var(--mainMarginDesktop) + var(--mainMarginDesktop) / 2);
+  min-width: calc(var(--mainMarginDesktop) + var(--mainMarginDesktop) / 2);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.content .contact-infos > div > div p a {
+  padding-right: 10px;
+  color: var(--mainDarkBlue);
+}
+.content .contact-infos > div > div p a:hover {
+  color: var(--mainGreen);
+}
+.content .contact-infos > div > div .contact-share {
+  margin: 0;
+}
+.content .contact-infos > div > div .contact-share img {
+  width: 20px;
+}
 .content .wpcf7-form {
   width: 100%;
   background-color: var(--mainDarkGreen);
@@ -183,6 +226,8 @@
   padding: var(--mainMarginDesktop);
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: -1;
 }
 .content .wpcf7-form .contact-who {
   display: flex;
@@ -204,7 +249,7 @@
   color: var(--mainDarkBlue);
   background-color: var(--mainDarkGreenLight);
   width: 100%;
-  min-height: var(--mainMarginDesktop);
+  min-height: calc(var(--mainMarginDesktop) + var(--mainMarginDesktop) / 4);
   padding-left: 5px;
   margin-top: 5px;
 }
@@ -215,7 +260,7 @@
   color: var(--mainDarkBlue);
   background-color: var(--mainDarkGreenLight);
   width: 100%;
-  min-height: var(--mainMarginDesktop);
+  min-height: calc(var(--mainMarginDesktop) + var(--mainMarginDesktop) / 4);
   padding-left: 5px;
   padding-top: 3px;
   margin-top: 5px;
@@ -358,6 +403,28 @@
   .content .content__div--competence .content__div--communication .content__div--communication--text.actived2 .content__div--communication--p {
     padding: 0;
   }
+  .content .wpcf7-form .contact-who {
+    display: flex;
+    flex-direction: column;
+  }
+  .content .wpcf7-form .contact-who p {
+    width: 100%;
+  }
+  .content .wpcf7-form .contact-who p:first-child {
+    margin-right: 0;
+  }
+  .content .wpcf7-form .contact-who p:last-child {
+    margin-left: 0;
+    margin-top: var(--mainMarginDesktop);
+  }
+  .content .wpcf7-form .contact-send p {
+    justify-content: center;
+  }
+  .content .wpcf7-form .contact-send p .wpcf7-submit {
+    width: 100%;
+    height: calc(var(--mainMarginDesktop) + var(--mainMarginDesktop) / 2);
+    padding: 0;
+  }
 }
 @media (max-width: 450px) {
   .content h1 {
@@ -367,9 +434,12 @@
     font-size: 1.2rem;
   }
   .content p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .content li {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+  }
+  .content .wpcf7-form {
+    padding: calc(var(--mainMarginDesktop) - var(--mainMarginDesktop) / 3);
   }
 }/*# sourceMappingURL=content.css.map */

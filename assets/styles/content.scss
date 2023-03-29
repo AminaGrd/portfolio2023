@@ -185,7 +185,51 @@
                 }
             }
         }
-    } 
+    }
+    .contact-infos{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: solid 3px var(--mainGreen);
+        padding: var(--mainMarginDesktop);
+        border-radius: 20px;
+        margin-bottom: var(--mainMarginDesktop);
+        >div{
+            display: flex;
+            flex-direction: row;
+            &:last-child{
+                margin-top: calc(var(--mainMarginDesktop) * 2);
+            }
+            >div{
+                width: 50%;
+                display: flex;
+                align-items: center;
+                .contact-logo{
+                    margin: 0 10px 0 0;
+                    img{
+                        max-height: calc(var(--mainMarginDesktop) + (var(--mainMarginDesktop) / 2));
+                        min-width: calc(var(--mainMarginDesktop) + (var(--mainMarginDesktop) / 2));
+                        object-fit: contain;
+                    }
+                }
+                p{
+                    a{
+                        padding-right: 10px;
+                        color: var(--mainDarkBlue);
+                        &:hover{
+                            color: var(--mainGreen);
+                        }
+                    }
+                }
+                .contact-share{
+                    margin: 0;
+                    img{
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
     .wpcf7-form {
         width: 100%;
         background-color: var(--mainDarkGreen);
@@ -193,6 +237,8 @@
         padding: var(--mainMarginDesktop);
         display: flex;
         flex-direction: column;
+        position: relative;
+        z-index: -1;
         .contact-who{
             display: flex;
             flex-direction: row;
@@ -214,7 +260,7 @@
                         color: var(--mainDarkBlue);
                         background-color: var(--mainDarkGreenLight);
                         width: 100%;
-                        min-height: var(--mainMarginDesktop);
+                        min-height: calc(var(--mainMarginDesktop) + (var(--mainMarginDesktop) / 4));
                         padding-left: 5px;
                         margin-top: 5px;
                         &:focus{
@@ -225,7 +271,7 @@
                         color: var(--mainDarkBlue);
                         background-color: var(--mainDarkGreenLight);
                         width: 100%;
-                        min-height: var(--mainMarginDesktop);
+                        min-height: calc(var(--mainMarginDesktop) + (var(--mainMarginDesktop) / 4));
                         padding-left: 5px;
                         padding-top: 3px;
                         margin-top: 5px;
@@ -399,6 +445,32 @@
                     }
                 }
             }
+        }
+        .wpcf7-form {
+            .contact-who{
+                display: flex;
+                flex-direction: column;
+                p{
+                    width: 100%;
+                    &:first-child{
+                        margin-right: 0;
+                    }
+                    &:last-child{
+                        margin-left: 0;
+                        margin-top: var(--mainMarginDesktop);
+                    }
+                }
+            }
+            .contact-send{
+                p{
+                    justify-content: center;
+                    .wpcf7-submit{
+                        width: 100%;
+                        height: calc(var(--mainMarginDesktop) + (var(--mainMarginDesktop) / 2));
+                        padding: 0;
+                    }
+                }
+            }
         }  
     }
     @media (max-width: 450px){
@@ -409,10 +481,13 @@
             font-size: 1.2rem;
         }
         p{
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
         li{
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+        }
+        .wpcf7-form{
+            padding: calc(var(--mainMarginDesktop) - (var(--mainMarginDesktop) / 3));
         }
     }
 }
