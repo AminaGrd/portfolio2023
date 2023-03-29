@@ -503,6 +503,6 @@
   }
   .content .contact-infos > div:last-child {
     width: 100%;
-    margin-top: var(--mainMarginDesktop);
+    margin-top: calc(var(--mainMarginDesktop) * 2);
   }
 }/*# sourceMappingURL=content.css.map */
