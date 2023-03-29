@@ -32,6 +32,13 @@ nav{
                         text-underline-position: under;
                     }
                 }
+                &.current_page_item{
+                    a{
+                        text-decoration: underline var(--mainGreen);
+                        text-underline-position: under;
+                    }
+                }
+
             }
             .menu-item-has-children{
                 >a{
