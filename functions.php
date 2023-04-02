@@ -42,8 +42,15 @@ function register_assets(){
       );
 
       wp_enqueue_style(
-            'site-web-css',
-            get_template_directory_uri().'/assets/styles/site-web.css',
+            'page-css',
+            get_template_directory_uri().'/assets/styles/page.css',
+            array(),
+            '1.0'
+      );
+
+      wp_enqueue_style(
+            'post-css',
+            get_template_directory_uri().'/assets/styles/post.css',
             array(),
             '1.0'
       );
