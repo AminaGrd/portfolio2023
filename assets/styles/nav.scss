@@ -72,7 +72,7 @@ nav{
         margin: 0;
         .menu-navbar-container{
             display: none;
-            position: absolute;
+            position: fixed;
             background-color: var(--mainDarkBlueAlpha);
             z-index: 2;
             padding: var(--mainMarginDesktop) 0;
@@ -101,11 +101,18 @@ nav{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 30px;
+            height: 70px;
             margin-top: 20px;
             margin-left: var(--mainMarginDesktop);
-            position: absolute;
+            position: fixed;
             z-index: 3;
+            background-color: white;
+            border: solid 3px var(--mainDarkBlue);
+            border-radius: 50px;
+            padding: 20px 10px;
+            animation-duration: 0.5s;
+            animation-name: BurgerColor;
+            animation-fill-mode: forwards;
                 >div{
                     height: 3px;
                     width: 30px;
@@ -161,7 +168,7 @@ nav{
         }
     }
 }
-@keyframes showMenu {
+  @keyframes showMenu {
     from {
         top: -500px;
     }
@@ -181,11 +188,9 @@ nav{
   @keyframes crossMenu1 {
     from {
         transform: rotate(0deg) translate(0px, 0px);
-        background-color: var(--mainDarkBlue);
     }
     to {
-        transform: rotate(45deg) translate(9px, 9px);
-        background-color: white;
+        transform: rotate(45deg) translate(7px, 9px);
     }
   }
   @keyframes crossMenu2 {
@@ -199,17 +204,15 @@ nav{
   @keyframes crossMenu3 {
     from {
         transform: rotate(0deg) translate(0px, 0px);
-        background-color: var(--mainDarkBlue);
     }
     to {
-        transform: rotate(-45deg) translate(9px, -9px);
-        background-color: white;
+        transform: rotate(-45deg) translate(7px, -9px);
     }
   }
 
   @keyframes burgerMenu1 {
     from {
-        transform: rotate(45deg) translate(9px, 9px);
+        transform: rotate(45deg) translate(7px, 9px);
         background-color: white;
     }
     to {
@@ -227,7 +230,7 @@ nav{
   }
   @keyframes burgerMenu3 {
     from {
-        transform: rotate(-45deg) translate(9px, -9px);
+        transform: rotate(-45deg) translate(7px, -9px);
         background-color: white;
     }
     to {
