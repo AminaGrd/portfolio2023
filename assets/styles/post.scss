@@ -1,4 +1,38 @@
 .content{
+    .btn-post{
+        margin-top: calc(var(--mainMarginDesktop) / 2);
+        .wp-block-buttons{
+            justify-content: space-evenly;
+            .btn--website{
+                a{
+                    transition: transform 0.5s;
+                    background-color: var(--mainGreen);
+                    color: var(--mainDarkBlue);
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                
+            }
+            .btn--behance{
+                a{
+                    transition: transform 0.5s;
+                    background-color: white;
+                    color: var(--mainDarkGreen);
+                    border: solid 2px var(--mainDarkGreen);
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                
+            }
+            >div{
+                margin-right: calc(var(--mainMarginDesktop) / 2);
+                margin-left: calc(var(--mainMarginDesktop) / 2);
+                margin-top: calc(var(--mainMarginDesktop) / 2);
+            }
+        }
+    }
     .article--diaporama{
         display: flex;
         flex-direction: column;

@@ -1,3 +1,31 @@
+.content .btn-post {
+  margin-top: calc(var(--mainMarginDesktop) / 2);
+}
+.content .btn-post .wp-block-buttons {
+  justify-content: space-evenly;
+}
+.content .btn-post .wp-block-buttons .btn--website a {
+  transition: transform 0.5s;
+  background-color: var(--mainGreen);
+  color: var(--mainDarkBlue);
+}
+.content .btn-post .wp-block-buttons .btn--website a:hover {
+  transform: scale(1.1);
+}
+.content .btn-post .wp-block-buttons .btn--behance a {
+  transition: transform 0.5s;
+  background-color: white;
+  color: var(--mainDarkGreen);
+  border: solid 2px var(--mainDarkGreen);
+}
+.content .btn-post .wp-block-buttons .btn--behance a:hover {
+  transform: scale(1.1);
+}
+.content .btn-post .wp-block-buttons > div {
+  margin-right: calc(var(--mainMarginDesktop) / 2);
+  margin-left: calc(var(--mainMarginDesktop) / 2);
+  margin-top: calc(var(--mainMarginDesktop) / 2);
+}
 .content .article--diaporama {
   display: flex;
   flex-direction: column;
