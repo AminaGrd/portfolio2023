@@ -7,6 +7,41 @@
   font-size: 4rem;
   margin-bottom: var(--mainMarginDesktop);
 }
+.content > h2 {
+  font-size: 2rem;
+  color: var(--mainDarkGreen);
+  text-transform: uppercase;
+  margin-top: var(--mainMarginDesktop);
+  margin-bottom: calc(var(--mainMarginDesktop) / 2);
+}
+.content > h3 {
+  font-size: 1.2rem;
+  color: var(--mainGreen);
+  text-transform: uppercase;
+  margin-top: calc(var(--mainMarginDesktop) / 1.5);
+  margin-bottom: calc(var(--mainMarginDesktop) / 3);
+}
+.content > p {
+  margin-bottom: calc(var(--mainMarginDesktop) / 4);
+}
+.content > ul {
+  border: solid 3px var(--mainDarkBlue);
+  border-radius: 20px;
+  padding: calc(var(--mainMarginDesktop) / 2);
+  margin-bottom: calc(var(--mainMarginDesktop) / 2);
+  margin-top: calc(var(--mainMarginDesktop) / 2);
+}
+.content > ul > li {
+  list-style-type: disclosure-closed;
+  margin-left: calc(var(--mainMarginDesktop) / 1.5);
+  margin-top: calc(var(--mainMarginDesktop) / 2);
+}
+.content > ul > li:first-child {
+  margin-top: 0;
+}
+.content > ul > li > ul {
+  margin-left: calc(var(--mainMarginDesktop) / 2);
+}
 .content .content__presentation {
   display: flex;
   flex-direction: row;

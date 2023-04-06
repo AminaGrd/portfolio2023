@@ -6,7 +6,7 @@
 }
 .content .article--diaporama .article--diaporama__image {
   background-color: var(--mainDarkGreen);
-  width: 75%;
+  width: 90%;
   padding: var(--mainMarginDesktop) var(--mainMarginDesktop) 0 var(--mainMarginDesktop);
   border-radius: 20px;
 }
@@ -67,6 +67,72 @@
 .content .article--diaporama .article--diaporama__animation .active, .content .article--diaporama .article--diaporama__animation .dot:hover {
   background-color: var(--mainDarkBlueAlpha3);
 }
+.content .wp-block-embed-youtube {
+  background-color: black;
+  width: 90%;
+  border-radius: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: calc(var(--mainMarginDesktop) / 2);
+  margin-top: calc(var(--mainMarginDesktop) / 2);
+}
+.content .wp-block-embed-youtube .wp-block-embed__wrapper {
+  display: flex;
+  justify-content: center;
+}
+.content .wp-block-embed-youtube .wp-block-embed__wrapper iframe {
+  width: 90%;
+  border-radius: 20px;
+}
+.content .wp-block-audio {
+  margin-bottom: calc(var(--mainMarginDesktop) / 2);
+  margin-top: calc(var(--mainMarginDesktop) / 2);
+}
+.content .wp-block-audio audio {
+  min-width: 0;
+}
+.content .wp-block-audio audio::-webkit-media-controls-panel {
+  background-color: var(--mainGreen);
+}
+.content .related_posts {
+  border-top: solid 3px var(--mainDarkGreen);
+  margin-top: calc(var(--mainMarginDesktop) * 2);
+  margin-bottom: calc(var(--mainMarginDesktop));
+}
+.content .related_posts h2 {
+  color: var(--mainDarkBlue);
+  font-size: 2rem;
+  margin-top: calc(var(--mainMarginDesktop) / 2);
+}
+.content .related_posts ul {
+  margin-top: calc(var(--mainMarginDesktop) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.content .related_posts ul li {
+  width: 250px;
+  margin-right: calc(var(--mainMarginDesktop) / 2);
+  margin-left: calc(var(--mainMarginDesktop) / 2);
+}
+.content .related_posts ul li div a img {
+  width: 250px;
+  height: 250px;
+  border-radius: 20px;
+  transition: transform 0.5s;
+}
+.content .related_posts ul li div a img:hover {
+  transform: scale(1.05);
+}
+.content .related_posts ul li div h4 {
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+@media (max-width: 1400px) {
+  .content .related_posts {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 750px) {
   .content .article--diaporama {
     width: 100%;
@@ -77,5 +143,17 @@
   }
   .content .article--diaporama .article--diaporama__image figure figcaption {
     font-size: 0.8rem;
+  }
+  .content .article--diaporama .article--diaporama__animation {
+    width: 100%;
+  }
+  .content .wp-block-embed-youtube {
+    width: 100%;
+  }
+  .content .wp-block-audio audio::-webkit-media-controls-current-time-display {
+    font-size: 0.7rem;
+  }
+  .content .wp-block-audio audio::-webkit-media-controls-time-remaining-display {
+    font-size: 0.7rem;
   }
 }/*# sourceMappingURL=post.css.map */
