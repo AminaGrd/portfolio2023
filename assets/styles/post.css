@@ -43,6 +43,8 @@
 }
 .content .article--diaporama .article--diaporama__image figure img {
   margin-bottom: var(--mainMarginDesktop);
+  margin-right: auto;
+  margin-left: auto;
 }
 .content .article--diaporama .article--diaporama__image figure figcaption {
   text-align: center;
@@ -138,14 +140,14 @@
   justify-content: space-evenly;
 }
 .content .related_posts ul li {
-  width: 250px;
+  width: var(--mainSizeBasic);
   margin-right: calc(var(--mainMarginDesktop) / 2);
   margin-left: calc(var(--mainMarginDesktop) / 2);
   margin-top: calc(var(--mainMarginDesktop) / 2);
 }
 .content .related_posts ul li div a img {
-  width: 250px;
-  height: 250px;
+  width: var(--mainSizeBasic);
+  height: var(--mainSizeBasic);
   border-radius: 20px;
   transition: transform 0.5s;
 }
@@ -193,5 +195,36 @@
 @media (max-width: 450px) {
   .content .related_posts h2 {
     font-size: 1.2rem;
+  }
+}
+@media (min-width: 1900px) {
+  .content .btn-post .wp-block-buttons .btn--website a {
+    font-size: 1.8rem;
+  }
+  .content .btn-post .wp-block-buttons .btn--behance a {
+    font-size: 1.8rem;
+  }
+  .content .article--diaporama .article--diaporama__image figure figcaption {
+    font-size: 1.5rem;
+  }
+  .content .article--diaporama .article--diaporama__animation {
+    width: 75%;
+  }
+  .content .article--diaporama .article--diaporama__animation .prev, .content .article--diaporama .article--diaporama__animation .next {
+    width: 60px;
+    height: 60px;
+    font-size: 2.2rem;
+  }
+  .content .article--diaporama .article--diaporama__animation .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 3px;
+  }
+  .content .wp-block-audio audio::-webkit-media-controls-current-time-display {
+    font-size: 1.5rem;
+  }
+  .content .wp-block-audio audio::-webkit-media-controls-time-remaining-display {
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=post.css.map */

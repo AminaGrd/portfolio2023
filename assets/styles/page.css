@@ -12,8 +12,8 @@
 }
 .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb a img {
   width: 500px;
-  min-width: 250px;
-  height: 250px;
+  min-width: var(--mainSizeBasic);
+  height: var(--mainSizeBasic);
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 20px;
@@ -172,5 +172,46 @@
   .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner h2 {
     font-size: 1.2rem;
     width: 150px;
+  }
+}
+@media (min-width: 1900px) {
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb a img {
+    width: 600px;
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .prev-slide, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .next-slide {
+    width: 350px;
+    height: 175px;
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .prev-slide img, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-thumb .next-slide img {
+    width: 100px;
+    height: auto;
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner {
+    margin-top: calc(var(--mainMarginDesktop) / 2);
+    margin-bottom: var(--mainMarginDesktop);
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner h2 {
+    color: var(--mainDarkBlue);
+    font-size: 2rem;
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner .prev, .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-inner .next {
+    width: 60px;
+    height: 60px;
+    font-size: 2.2rem;
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button .cs-post-resume {
+    width: 95%;
+    height: calc(var(--mainSizeNavbar) * 1.5);
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button .cs-post-button a {
+    width: 18%;
+    right: calc(var(--mainMarginDesktop) * 5);
+    min-height: calc(var(--mainSizeNavbar) * 1.5);
+    height: auto;
+    font-size: 1.6rem;
+    padding-top: 110px;
+  }
+  .content .cs-post-carousel-layout .swiper-container .swiper-wrapper .swiper-slide .cs-post-resume-button:hover .cs-post-resume {
+    width: 80%;
   }
 }/*# sourceMappingURL=page.css.map */

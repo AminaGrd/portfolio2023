@@ -21,6 +21,18 @@
     --mainDarkGreenLight: #0f6d64;
     --mainSizeNavbar: 180px;
     --mainMarginDesktop: 30px;
+    --mainSizeBasic: 250px;
+}
+// var(--mainSizeBasic)
+@media (min-width: 1550px){
+    :root {
+        --mainSizeBasic: 300px;
+    }
+}
+@media (min-width: 1900px){
+    :root {
+        --mainSizeBasic: 350px;
+    }
 }
 
 html {

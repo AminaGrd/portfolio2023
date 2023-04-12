@@ -151,6 +151,24 @@ nav .menu-navbar-container #menu-navbar .menu-item-has-children .sub-menu .curre
     animation-fill-mode: both;
   }
 }
+@media (min-width: 1550px) {
+  nav {
+    width: calc(var(--mainSizeNavbar) * 1.3);
+  }
+  nav .menu-navbar-container #menu-navbar > li a {
+    width: calc(var(--mainSizeNavbar) * 1.3);
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1900px) {
+  nav {
+    width: calc(var(--mainSizeNavbar) * 1.5);
+  }
+  nav .menu-navbar-container #menu-navbar > li a {
+    width: calc(var(--mainSizeNavbar) * 1.5);
+    font-size: 1.8rem;
+  }
+}
 
 @keyframes showMenu {
   from {

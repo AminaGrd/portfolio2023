@@ -47,6 +47,8 @@
                 margin: 0;
                 img{
                     margin-bottom: var(--mainMarginDesktop);
+                    margin-right: auto;
+                    margin-left: auto;
                 }
                 figcaption{
                     text-align: center;
@@ -146,15 +148,15 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             li{
-                width: 250px;
+                width: var(--mainSizeBasic);
                 margin-right: calc(var(--mainMarginDesktop) / 2);
                 margin-left: calc(var(--mainMarginDesktop) / 2);
                 margin-top: calc(var(--mainMarginDesktop) / 2);
                 div{
                     a{
                         img{
-                            width: 250px;
-                            height: 250px;
+                            width: var(--mainSizeBasic);
+                            height: var(--mainSizeBasic);
                             border-radius: 20px;
                             transition: transform 0.5s;
                             &:hover{
@@ -219,4 +221,57 @@
             }
         } 
     }
+    @media (min-width: 1900px){
+        .btn-post{
+            .wp-block-buttons{
+                .btn--website{
+                    a{
+                        font-size: 1.8rem;
+                    }
+                    
+                }
+                .btn--behance{
+                    a{
+                        font-size: 1.8rem;
+                    }
+                    
+                }
+            }
+        }
+        .article--diaporama{
+            .article--diaporama__image{
+                figure{
+                    figcaption{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .article--diaporama__animation{
+                width: 75%;
+                .prev, .next {
+                    width: 60px;
+                    height: 60px;
+                    font-size: 2.2rem;
+                }
+                .dot {
+                    cursor: pointer;
+                    height: 15px;
+                    width: 15px;
+                    margin: 0 3px;
+                }
+            }
+        }
+        .wp-block-audio{
+            audio{
+                &::-webkit-media-controls-current-time-display {
+                    font-size: 1.5rem;
+                }
+                &::-webkit-media-controls-time-remaining-display {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
 }
+// https://blog.shahednasser.com/how-to-style-an-audio-element/
+// ==> website customize audio player

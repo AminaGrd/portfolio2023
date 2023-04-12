@@ -51,4 +51,11 @@ footer{
     @media (max-width: 1000px){
         margin-left: calc(var(--mainMarginDesktop));
     }
+    @media (min-width: 1900px){
+        .footer__contact{
+            img{
+                width: calc(var(--mainMarginDesktop)*3);
+            }
+        }
+    }
 }

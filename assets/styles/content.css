@@ -50,16 +50,16 @@
   margin-bottom: var(--mainMarginDesktop);
 }
 .content .content__presentation .content__img--size {
-  min-width: 250px;
-  max-width: 250px;
+  min-width: var(--mainSizeBasic);
+  max-width: var(--mainSizeBasic);
   margin: 0;
 }
 .content .content__presentation .content__img--size img {
   border-radius: 20px;
-  max-width: 250px;
+  max-width: var(--mainSizeBasic);
 }
 .content .content__presentation .content__text {
-  min-height: 250px;
+  min-height: var(--mainSizeBasic);
   background-color: var(--mainDarkGreen);
   margin-left: var(--mainMarginDesktop);
   border-radius: 20px;
@@ -92,10 +92,10 @@
   text-align: center;
 }
 .content .content__div--competence .disactived h2 {
-  min-height: 250px;
-  min-width: 250px;
-  max-height: 250px;
-  height: 250px;
+  min-height: var(--mainSizeBasic);
+  min-width: var(--mainSizeBasic);
+  max-height: var(--mainSizeBasic);
+  height: var(--mainSizeBasic);
   border-radius: 20px;
   padding: var(--mainMarginDesktop);
   display: table-cell;
@@ -122,18 +122,18 @@
   border-radius: 20px;
 }
 .content .content__div--competence .content__div--webdesign .content__div--webdesign--text.actived2 {
-  min-height: 250px;
-  min-width: 250px;
-  max-height: 250px;
+  min-height: var(--mainSizeBasic);
+  min-width: var(--mainSizeBasic);
+  max-height: var(--mainSizeBasic);
   width: 100%;
   margin-right: var(--mainMarginDesktop);
   background: var(--mainGreen);
 }
 .content .content__div--competence .content__div--webdesign .content__div--webdesign--text.disactived2 {
-  min-height: 250px;
-  min-width: 250px;
-  max-height: 250px;
-  max-width: 250px;
+  min-height: var(--mainSizeBasic);
+  min-width: var(--mainSizeBasic);
+  max-height: var(--mainSizeBasic);
+  max-width: var(--mainSizeBasic);
   margin-right: var(--mainMarginDesktop);
   width: 100%;
   background: url(http://localhost/portfolio/wp-content/uploads/2023/01/bckgrd-bug2-scaled.jpg) no-repeat;
@@ -156,10 +156,10 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-height: 250px;
-  min-width: 250px;
-  max-height: 250px;
-  width: 250px;
+  min-height: var(--mainSizeBasic);
+  min-width: var(--mainSizeBasic);
+  max-height: var(--mainSizeBasic);
+  width: var(--mainSizeBasic);
   border: var(--mainDarkBlue) 3px solid;
   border-radius: 20px;
 }
@@ -185,18 +185,18 @@
   border-radius: 20px;
 }
 .content .content__div--competence .content__div--communication .content__div--communication--text.disactived2 {
-  min-width: 250px;
-  min-height: 250px;
+  min-width: var(--mainSizeBasic);
+  min-height: var(--mainSizeBasic);
   margin-left: var(--mainMarginDesktop);
   background: url(http://localhost/portfolio/wp-content/uploads/2023/01/bckgrd-bug1-1-scaled-e1673789660900.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 .content .content__div--competence .content__div--communication .content__div--communication--text.actived2 {
-  min-height: 250px;
-  min-width: 250px;
-  max-height: 250px;
-  width: calc(100vw - (var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar) + 250px + var(--mainMarginDesktop) * 5));
+  min-height: var(--mainSizeBasic);
+  min-width: var(--mainSizeBasic);
+  max-height: var(--mainSizeBasic);
+  width: calc(100vw - (var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar) + var(--mainSizeBasic) + var(--mainMarginDesktop) * 5));
   margin-right: var(--mainMarginDesktop);
   background: var(--mainGreen);
 }
@@ -336,7 +336,7 @@
     padding: var(--mainMarginDesktop) var(--mainMarginDesktop) var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar));
   }
   .content .content__div--competence .content__div--communication .content__div--communication--text.actived2 {
-    width: calc(100vw - (var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar) + 250px + var(--mainMarginDesktop) * 2));
+    width: calc(100vw - (var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar) + var(--mainSizeBasic) + var(--mainMarginDesktop) * 2));
   }
 }
 @media (max-width: 1250px) {
@@ -356,7 +356,7 @@
   }
   .content .content__div--competence .content__div--webdesign .content__div--webdesign--text.disactived2 {
     min-height: 0;
-    min-width: 250px;
+    min-width: var(--mainSizeBasic);
     max-height: 100%;
     height: calc(var(--mainMarginDesktop) * 4);
     max-width: 100%;
@@ -554,5 +554,56 @@
   .content .contact-infos > div:last-child {
     width: 100%;
     margin-top: calc(var(--mainMarginDesktop) * 2);
+  }
+}
+@media (min-width: 1550px) {
+  .content {
+    padding: var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 4) var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 2 + (var(--mainSizeNavbar)) * 1.3);
+  }
+  .content p {
+    font-size: 1.2rem;
+  }
+  .content li {
+    font-size: 1.2rem;
+  }
+  .content .content__div--competence .content__div--webdesign .content__div--webdesign--logo > div figure img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
+@media (min-width: 1900px) {
+  .content {
+    padding: var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 5) var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 2 + (var(--mainSizeNavbar)) * 1.5);
+  }
+  .content p {
+    font-size: 1.5rem;
+  }
+  .content li {
+    font-size: 1.5rem;
+  }
+  .content .content__div--competence .content__div--webdesign .content__div--webdesign--logo > div figure img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+  .content .content__div--competence .actived h2 {
+    font-size: 1.8rem;
+  }
+  .content .content__div--competence .content__div--communication .disactived h2 {
+    font-size: 1.8rem;
+  }
+  .content h1 {
+    font-size: 5rem;
+  }
+  .content > h2 {
+    font-size: 3rem;
+  }
+  .content > h3 {
+    font-size: 1.8rem;
+  }
+  .content > p {
+    font-size: 1.5rem;
+  }
+  .content > ul > li {
+    font-size: 1.5rem;
   }
 }/*# sourceMappingURL=content.css.map */
