@@ -226,10 +226,7 @@
                             }
                         }
                         .cs-post-inner{
-                            margin-top: calc(var(--mainMarginDesktop)/2);
-                            margin-bottom: var(--mainMarginDesktop);
                             h2{
-                                color: var(--mainDarkBlue);
                                 font-size: 2rem;
                             }
                             .prev, .next {
@@ -253,9 +250,41 @@
                                     padding-top: 110px;
                                 }
                             }
-                            &:hover{
-                                .cs-post-resume{
-                                    width: 80%;
+                        }
+                    }
+                    @media (min-width: 2500px){
+                        .cs-post-thumb{
+                            a{
+                                img{
+                                    width: 800px;
+                                }
+                            }
+                            .prev-slide, .next-slide{
+                                width: 400px;
+                                height: 200px;
+                            }
+                        }
+                        .cs-post-inner{
+                            margin-top: var(--mainMarginDesktop);
+                            h2{
+                                font-size: 3rem;
+                            }
+                            .prev, .next {
+                                width: 80px;
+                                height: 80px;
+                                font-size: 2.9rem;
+                            }
+                        }
+                        .cs-post-resume-button{
+                            .cs-post-resume{
+                                height: calc(var(--mainSizeNavbar) * 1.8);
+                            }
+                            .cs-post-button{
+                                a{
+                                    right: calc(var(--mainMarginDesktop) * 4);
+                                    min-height: calc(var(--mainSizeNavbar) * 1.8);
+                                    font-size: 2rem;
+                                    padding-top: 130px;
                                 }
                             }
                         }

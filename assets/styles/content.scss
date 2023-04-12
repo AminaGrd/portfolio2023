@@ -628,6 +628,13 @@
                     }
                 }
             }
+            .content__div--communication{
+                .content__div--communication--text{
+                    &.actived2{
+                        width: calc(100vw - (calc(var(--mainMarginDesktop)*2 + calc(var(--mainSizeNavbar) * 1.3)) + var(--mainSizeBasic) + calc(var(--mainMarginDesktop) * 5)));
+                    }
+                }
+            }
         }
     }
     @media (min-width: 1900px){
@@ -657,10 +664,27 @@
                     font-size: 1.8rem;
                 }
             }
+            .disactived2{
+                h2{
+                    font-size: 1.8rem;
+                }
+            }
             .content__div--communication{
                 .disactived{
                     h2{
                         font-size: 1.8rem;
+                    }
+                }
+                .actived{
+                    h2{
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+            .content__div--communication{
+                .content__div--communication--text{
+                    &.actived2{
+                        width: calc(100vw - (calc(var(--mainMarginDesktop)*2 + calc(var(--mainSizeNavbar) * 1.5)) + var(--mainSizeBasic) + calc(var(--mainMarginDesktop) * 6)));
                     }
                 }
             }
@@ -680,6 +704,73 @@
         >ul{
             >li{
                 font-size: 1.5rem;
+            }
+        }
+    }
+    @media (min-width: 2500px){
+        padding: var(--mainMarginDesktop) calc(var(--mainMarginDesktop)*4) var(--mainMarginDesktop) calc(var(--mainMarginDesktop)*2 + (var(--mainSizeNavbar)) * 2);
+        >h2{
+            font-size: 3.2rem;
+        }
+        >h3{
+            font-size: 2.2rem;
+        }
+        >p{
+            font-size: 1.8rem;
+        }
+        >ul{
+            >li{
+                font-size: 1.8rem;
+            }
+        }
+        p{
+            font-size: 1.8rem;
+        }
+        li{
+            font-size: 1.8rem;
+        }
+        .content__div--competence{
+            .content__div--webdesign{
+                .content__div--webdesign--logo{
+                    >div{
+                        figure{
+                            img{
+                                max-width: 80px;
+                                max-height: 80px;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            .actived{
+                h2{
+                    font-size: 2rem;
+                }
+            }
+            .disactived2{
+                h2{
+                    font-size: 2rem;
+                }
+            }
+            .content__div--communication{
+                .disactived{
+                    h2{
+                        font-size: 2rem;
+                    }
+                }
+                .actived{
+                    h2{
+                        font-size: 2rem;
+                    }
+                }
+            }
+            .content__div--communication{
+                .content__div--communication--text{
+                    &.actived2{
+                        width: calc(100vw - (calc(var(--mainMarginDesktop)*2 + calc(var(--mainSizeNavbar) * 2)) + var(--mainSizeBasic) + calc(var(--mainMarginDesktop) * 5)));
+                    }
+                }
             }
         }
     }

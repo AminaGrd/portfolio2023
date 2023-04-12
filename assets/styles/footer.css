@@ -58,4 +58,9 @@ footer .footer__contact img:hover {
   footer .footer__contact img {
     width: calc(var(--mainMarginDesktop) * 3);
   }
+}
+@media (min-width: 2500px) {
+  footer .footer__contact img {
+    width: calc(var(--mainMarginDesktop) * 2);
+  }
 }/*# sourceMappingURL=footer.css.map */

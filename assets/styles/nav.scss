@@ -191,6 +191,19 @@ nav{
             }
         }
     }
+    @media (min-width: 2500px){
+        width: calc(var(--mainSizeNavbar) * 2);
+        .menu-navbar-container{
+            #menu-navbar{
+                >li{
+                    a{
+                        width: calc(var(--mainSizeNavbar) * 2);
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
 
 }
   @keyframes showMenu {

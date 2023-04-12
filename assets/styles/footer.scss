@@ -58,4 +58,11 @@ footer{
             }
         }
     }
+    @media (min-width: 2500px){
+        .footer__contact{
+            img{
+                width: calc(var(--mainMarginDesktop)*2);
+            }
+        }
+    }
 }

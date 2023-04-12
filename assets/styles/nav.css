@@ -169,6 +169,15 @@ nav .menu-navbar-container #menu-navbar .menu-item-has-children .sub-menu .curre
     font-size: 1.8rem;
   }
 }
+@media (min-width: 2500px) {
+  nav {
+    width: calc(var(--mainSizeNavbar) * 2);
+  }
+  nav .menu-navbar-container #menu-navbar > li a {
+    width: calc(var(--mainSizeNavbar) * 2);
+    font-size: 2rem;
+  }
+}
 
 @keyframes showMenu {
   from {

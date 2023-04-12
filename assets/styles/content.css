@@ -570,6 +570,9 @@
     max-width: 50px;
     max-height: 50px;
   }
+  .content .content__div--competence .content__div--communication .content__div--communication--text.actived2 {
+    width: calc(100vw - (var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar) * 1.3 + var(--mainSizeBasic) + var(--mainMarginDesktop) * 5));
+  }
 }
 @media (min-width: 1900px) {
   .content {
@@ -588,8 +591,17 @@
   .content .content__div--competence .actived h2 {
     font-size: 1.8rem;
   }
+  .content .content__div--competence .disactived2 h2 {
+    font-size: 1.8rem;
+  }
   .content .content__div--competence .content__div--communication .disactived h2 {
     font-size: 1.8rem;
+  }
+  .content .content__div--competence .content__div--communication .actived h2 {
+    font-size: 1.8rem;
+  }
+  .content .content__div--competence .content__div--communication .content__div--communication--text.actived2 {
+    width: calc(100vw - (var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar) * 1.5 + var(--mainSizeBasic) + var(--mainMarginDesktop) * 6));
   }
   .content h1 {
     font-size: 5rem;
@@ -605,5 +617,47 @@
   }
   .content > ul > li {
     font-size: 1.5rem;
+  }
+}
+@media (min-width: 2500px) {
+  .content {
+    padding: var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 4) var(--mainMarginDesktop) calc(var(--mainMarginDesktop) * 2 + (var(--mainSizeNavbar)) * 2);
+  }
+  .content > h2 {
+    font-size: 3.2rem;
+  }
+  .content > h3 {
+    font-size: 2.2rem;
+  }
+  .content > p {
+    font-size: 1.8rem;
+  }
+  .content > ul > li {
+    font-size: 1.8rem;
+  }
+  .content p {
+    font-size: 1.8rem;
+  }
+  .content li {
+    font-size: 1.8rem;
+  }
+  .content .content__div--competence .content__div--webdesign .content__div--webdesign--logo > div figure img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+  .content .content__div--competence .actived h2 {
+    font-size: 2rem;
+  }
+  .content .content__div--competence .disactived2 h2 {
+    font-size: 2rem;
+  }
+  .content .content__div--competence .content__div--communication .disactived h2 {
+    font-size: 2rem;
+  }
+  .content .content__div--competence .content__div--communication .actived h2 {
+    font-size: 2rem;
+  }
+  .content .content__div--competence .content__div--communication .content__div--communication--text.actived2 {
+    width: calc(100vw - (var(--mainMarginDesktop) * 2 + var(--mainSizeNavbar) * 2 + var(--mainSizeBasic) + var(--mainMarginDesktop) * 5));
   }
 }/*# sourceMappingURL=content.css.map */
