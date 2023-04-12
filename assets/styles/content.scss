@@ -403,7 +403,7 @@
         }
     }
     @media (max-width: 1000px){
-        padding: calc(var(--mainMarginDesktop) * 2.8) var(--mainMarginDesktop) var(--mainMarginDesktop) var(--mainMarginDesktop); 
+        padding: calc(var(--mainMarginDesktop) * 2.5) var(--mainMarginDesktop) var(--mainMarginDesktop) var(--mainMarginDesktop); 
         .content__div--competence{
             .disactived{
                 h2{
@@ -456,6 +456,11 @@
                     .content__div--webdesign--p{
                         padding: 0;
                     }
+                    &.actived2{
+                        min-height: auto;
+                        min-width: auto;
+                        max-height: 100%;
+                    }
                     &.disactived2{
                         margin-bottom: 0;
                     }
@@ -463,6 +468,7 @@
                 .content__div--webdesign--logo{
                     width: calc(100vw - calc(var(--mainMarginDesktop)*2));
                     height: auto;
+                    min-width: auto;
                     min-height: auto;
                     max-height: auto;
                     padding: var(--mainMarginDesktop);
@@ -480,6 +486,9 @@
                         .content__div--communication--p{
                             padding: 0;
                         }
+                    }
+                    &.disactived2{
+                        min-width: auto;
                     }
                 }
             }

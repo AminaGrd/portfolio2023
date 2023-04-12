@@ -375,7 +375,7 @@
 }
 @media (max-width: 1000px) {
   .content {
-    padding: calc(var(--mainMarginDesktop) * 2.8) var(--mainMarginDesktop) var(--mainMarginDesktop) var(--mainMarginDesktop);
+    padding: calc(var(--mainMarginDesktop) * 2.5) var(--mainMarginDesktop) var(--mainMarginDesktop) var(--mainMarginDesktop);
   }
   .content .content__div--competence .disactived h2 {
     width: calc(100vw - var(--mainMarginDesktop) * 2);
@@ -420,12 +420,18 @@
   .content .content__div--competence .content__div--webdesign .content__div--webdesign--text .content__div--webdesign--p {
     padding: 0;
   }
+  .content .content__div--competence .content__div--webdesign .content__div--webdesign--text.actived2 {
+    min-height: auto;
+    min-width: auto;
+    max-height: 100%;
+  }
   .content .content__div--competence .content__div--webdesign .content__div--webdesign--text.disactived2 {
     margin-bottom: 0;
   }
   .content .content__div--competence .content__div--webdesign .content__div--webdesign--logo {
     width: calc(100vw - var(--mainMarginDesktop) * 2);
     height: auto;
+    min-width: auto;
     min-height: auto;
     max-height: auto;
     padding: var(--mainMarginDesktop);
@@ -440,6 +446,9 @@
   }
   .content .content__div--competence .content__div--communication .content__div--communication--text.actived2 .content__div--communication--p {
     padding: 0;
+  }
+  .content .content__div--competence .content__div--communication .content__div--communication--text.disactived2 {
+    min-width: auto;
   }
   .content .wpcf7-form .contact-who {
     display: flex;
