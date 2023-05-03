@@ -24,6 +24,9 @@
 .content > p {
   margin-bottom: calc(var(--mainMarginDesktop) / 4);
 }
+.content a {
+  color: var(--mainGreen);
+}
 .content > ul {
   border: solid 3px var(--mainDarkBlue);
   border-radius: 20px;
@@ -41,6 +44,9 @@
 }
 .content > ul > li > ul {
   margin-left: calc(var(--mainMarginDesktop) / 2);
+}
+.content > ul > li > ul li {
+  list-style-type: disc;
 }
 .content .content__presentation {
   display: flex;

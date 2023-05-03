@@ -23,6 +23,9 @@
     >p{
         margin-bottom: calc(var(--mainMarginDesktop) / 4);
     }
+    a{
+        color: var(--mainGreen);
+    }
     >ul{
         border: solid 3px var(--mainDarkBlue);
         border-radius: 20px;
@@ -38,6 +41,9 @@
             }
             >ul{
                 margin-left: calc(var(--mainMarginDesktop) / 2);
+                li{
+                    list-style-type: disc;
+                }
             }
         }
     }

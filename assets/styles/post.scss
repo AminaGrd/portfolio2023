@@ -34,6 +34,15 @@
                 }
                 
             }
+            .btn--behance--off{
+                a{
+                    background-color: rgb(241, 241, 241);
+                    color: var(--mainDarkGreenLight);
+                    border: solid 2px var(--mainDarkGreenLight);
+                    cursor: not-allowed;
+                }
+                
+            }
             >div{
                 margin-right: calc(var(--mainMarginDesktop) / 2);
                 margin-left: calc(var(--mainMarginDesktop) / 2);
@@ -46,6 +55,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        max-height: 85vh;
         .wp-block-file__embed{
             width: 90% !important;
         }
@@ -79,16 +89,27 @@
             width: 90%;
             padding: var(--mainMarginDesktop) var(--mainMarginDesktop) 0 var(--mainMarginDesktop);
             border-radius: 20px;
+            max-height: 85vh;
             figure{
                 margin: 0;
+                max-height: 85vh;
                 img{
                     margin-bottom: var(--mainMarginDesktop);
                     margin-right: auto;
                     margin-left: auto;
+                    max-height: 65vh;
+                    object-fit: contain;
                 }
                 figcaption{
                     text-align: center;
                     color: white;
+                }
+            }
+            .wp-block-file{
+                max-height: 65vh;
+                object{
+                    max-height: 65vh !important;
+                    width: 100% !important;
                 }
             }
         }
@@ -205,6 +226,10 @@
                     h4{
                         margin: 10px 0 0 0;
                         text-align: center;
+                        text-transform: uppercase;
+                        a{
+                            color: var(--mainDarkBlue);
+                        }
                     }
                 }
             }
@@ -276,7 +301,19 @@
                     }
                     
                 }
+                .btn--website--off{
+                    a{
+                        font-size: 1.8rem;
+                    }
+                    
+                }
                 .btn--behance{
+                    a{
+                        font-size: 1.8rem;
+                    }
+                    
+                }
+                .btn--behance--off{
                     a{
                         font-size: 1.8rem;
                     }

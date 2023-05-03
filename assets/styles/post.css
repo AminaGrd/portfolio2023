@@ -26,6 +26,12 @@
 .content .btn-post .wp-block-buttons .btn--behance a:hover {
   transform: scale(1.1);
 }
+.content .btn-post .wp-block-buttons .btn--behance--off a {
+  background-color: rgb(241, 241, 241);
+  color: var(--mainDarkGreenLight);
+  border: solid 2px var(--mainDarkGreenLight);
+  cursor: not-allowed;
+}
 .content .btn-post .wp-block-buttons > div {
   margin-right: calc(var(--mainMarginDesktop) / 2);
   margin-left: calc(var(--mainMarginDesktop) / 2);
@@ -36,6 +42,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  max-height: 85vh;
 }
 .content .wp-block-file .wp-block-file__embed {
   width: 90% !important;
@@ -66,18 +73,30 @@
   width: 90%;
   padding: var(--mainMarginDesktop) var(--mainMarginDesktop) 0 var(--mainMarginDesktop);
   border-radius: 20px;
+  max-height: 85vh;
 }
 .content .article--diaporama .article--diaporama__image figure {
   margin: 0;
+  max-height: 85vh;
 }
 .content .article--diaporama .article--diaporama__image figure img {
   margin-bottom: var(--mainMarginDesktop);
   margin-right: auto;
   margin-left: auto;
+  max-height: 65vh;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .content .article--diaporama .article--diaporama__image figure figcaption {
   text-align: center;
   color: white;
+}
+.content .article--diaporama .article--diaporama__image .wp-block-file {
+  max-height: 65vh;
+}
+.content .article--diaporama .article--diaporama__image .wp-block-file object {
+  max-height: 65vh !important;
+  width: 100% !important;
 }
 .content .article--diaporama .article--diaporama__animation {
   display: flex;
@@ -190,6 +209,10 @@
 .content .related_posts ul li div h4 {
   margin: 10px 0 0 0;
   text-align: center;
+  text-transform: uppercase;
+}
+.content .related_posts ul li div h4 a {
+  color: var(--mainDarkBlue);
 }
 @media (max-width: 1400px) {
   .content .related_posts {
@@ -240,7 +263,13 @@
   .content .btn-post .wp-block-buttons .btn--website a {
     font-size: 1.8rem;
   }
+  .content .btn-post .wp-block-buttons .btn--website--off a {
+    font-size: 1.8rem;
+  }
   .content .btn-post .wp-block-buttons .btn--behance a {
+    font-size: 1.8rem;
+  }
+  .content .btn-post .wp-block-buttons .btn--behance--off a {
     font-size: 1.8rem;
   }
   .content .article--diaporama .article--diaporama__image figure figcaption {
